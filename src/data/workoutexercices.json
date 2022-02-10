@@ -1,0 +1,282 @@
+[
+    {
+        "id": "Pectoraux",
+        "name": "Développé couché",
+        "path": "../assets/workout-images/chest_1.gif",
+        "set": 4,
+        "reps": 8,
+        "secondary": [
+            "triceps"
+        ]
+    },
+    {
+        "id": "Pectoraux",
+        "name": "Développé couché haltères",
+        "path": "../assets/workout-images/chest_2.gif",
+        "set": 4,
+        "reps": 10,
+        "secondary": [
+            "triceps"
+        ]
+    },
+    {
+        "id": "Pectoraux",
+        "name": "Développé couché prise inversée",
+        "path": "../assets/workout-images/chest_3.gif",
+        "set": 3,
+        "reps": 12,
+        "secondary": [
+            "triceps",
+            "biceps"
+        ]
+    },
+    {
+        "id": "Pectoraux",
+        "name": "Développé décliné à la barre",
+        "path": "../assets/workout-images/chest_4.gif",
+        "set": 4,
+        "reps": 12,
+        "secondary": [
+            "triceps",
+            "épaules"
+        ]
+    },
+    {
+        "id": "Pectoraux",
+        "name": "Écartés décliné avec haltères",
+        "path": "../assets/workout-images/chest_5.gif",
+        "set": 4,
+        "reps": 8,
+        "secondary": [
+            "triceps",
+            "épaules"
+        ]
+    },
+    {
+        "id": "Pectoraux",
+        "name": "Pompes",
+        "path": "../assets/workout-images/chest_6.gif",
+        "set": 4,
+        "reps": 20,
+        "secondary": [
+            "triceps"
+        ]
+    },
+    {
+        "id": "Pectoraux",
+        "name": "Pullover avec haltère",
+        "path": "../assets/workout-images/chest_7.gif",
+        "set": 4,
+        "reps": 20,
+        "secondary": [
+            "dorseaux",
+            "triceps"
+        ]
+    },
+    {
+        "id": "Pectoraux",
+        "name": "Développé incliné avec haltères",
+        "path": "../assets/workout-images/chest_8.gif",
+        "set": 4,
+        "reps": 20,
+        "secondary": [
+            "dorseaux",
+            "épaules"
+        ]
+    },
+    {
+        "id": "Pectoraux",
+        "name": "Écartés à la poulie haute",
+        "path": "../assets/workout-images/chest_9.gif",
+        "set": 4,
+        "reps": 20
+    },
+    {
+        "id": "Pectoraux",
+        "name": "Dips aux barres parallèles",
+        "path": "../assets/workout-images/chest_10.gif",
+        "set": 4,
+        "reps": 20,
+        "secondary": [
+            "triceps"
+        ]
+    },
+    {
+        "id": "Biceps",
+        "name": "Curl biceps concentré",
+        "path": "../assets/workout-images/biceps_1.gif",
+        "set": 4,
+        "reps": 12
+    },
+    {
+        "id": "Biceps",
+        "name": "Curl pupitre barre EZ",
+        "path": "../assets/workout-images/biceps_2.gif",
+        "set": 4,
+        "reps": 8,
+        "secondary": [
+            "avant-bras"
+        ]
+    },
+    {
+        "id": "Biceps",
+        "name": "Curl haltère incliné",
+        "path": "../assets/workout-images/biceps_3.gif",
+        "set": 3,
+        "reps": 10,
+        "secondary": [
+            "avant-bras"
+        ]
+    },
+    {
+        "id": "Biceps",
+        "name": "Curl biceps à la poulie basse",
+        "path": "../assets/workout-images/biceps_4.gif",
+        "set": 4,
+        "reps": 12
+    },
+    {
+        "id": "Biceps",
+        "name": "Curl à la poulie vis-à-vis",
+        "path": "../assets/workout-images/biceps_5.gif",
+        "set": 3,
+        "reps": 12
+    },
+    {
+        "id": "Biceps",
+        "name": "Curl à la barre",
+        "path": "../assets/workout-images/biceps_6.gif",
+        "set": 4,
+        "reps": 8
+    },
+    {
+        "id": "Biceps",
+        "name": "Curl haltère prise marteau au pupitre",
+        "path": "../assets/workout-images/biceps_7.gif",
+        "set": 3,
+        "reps": 10
+    },
+    {
+        "id": "Biceps",
+        "name": "Curl Zottman",
+        "path": "../assets/workout-images/biceps_8.gif",
+        "set": 3,
+        "reps": 10,
+        "secondary": [
+            "avant-bras"
+        ]
+    },
+    {
+        "id": "Dorseaux",
+        "name": "Tirage vertical prise inversée",
+        "path": "../assets/workout-images/dos_1.gif",
+        "set": 3,
+        "reps": 10,
+        "secondary": [
+            "biceps"
+        ]
+    },
+    {
+        "id": "Dorseaux",
+        "name": "Traction assistée avec élastique",
+        "path": "../assets/workout-images/dos_2.gif",
+        "set": 3,
+        "reps": "Max",
+        "secondary": [
+            "biceps"
+        ]
+    },
+    {
+        "id": "Dorseaux",
+        "name": "Tirage vertical poitrine",
+        "path": "../assets/workout-images/dos_3.gif",
+        "set": 4,
+        "reps": 8,
+        "secondary": [
+            "biceps"
+        ]
+    },
+    {
+        "id": "Dorseaux",
+        "name": "Soulevé de terre",
+        "path": "../assets/workout-images/dos_4.gif",
+        "set": 3,
+        "reps": "Max",
+        "secondary": [
+            "ischio",
+            "fessiers",
+            "quadriceps"
+        ]
+    },
+    {
+        "id": "Dorseaux",
+        "name": "Pullover avec haltères",
+        "path": "../assets/workout-images/dos_5.gif",
+        "set": 4,
+        "reps": 8,
+        "secondary": [
+            "triceps",
+            "pectoraux"
+        ]
+    },
+    {
+        "id": "Dorseaux",
+        "name": "Rowing barre",
+        "path": "../assets/workout-images/dos_6.gif",
+        "set": 4,
+        "reps": 10
+    },
+    {
+        "id": "Dorseaux",
+        "name": "Tirage vertical prise serrée",
+        "path": "../assets/workout-images/dos_7.gif",
+        "set": 4,
+        "reps": 8,
+        "secondary": [
+            "avant-bras",
+            "épaules"
+        ]
+    },
+    {
+        "id": "Dorseaux",
+        "name": "Traction suppination",
+        "path": "../assets/workout-images/dos_8.gif",
+        "set": 3,
+        "reps": "Max",
+        "secondary": [
+            "avant-bras",
+            "biceps"
+        ]
+    },
+    {
+        "id": "Dorseaux",
+        "name": "Rowing haltères à un bras",
+        "path": "../assets/workout-images/dos_9.gif",
+        "set": 4,
+        "reps": 8,
+        "secondary": [
+            "triceps"
+        ]
+    },
+    {
+        "id": "Dorseaux",
+        "name": "Extension lombaire 45°",
+        "path": "../assets/workout-images/dos_10.gif",
+        "set": 3,
+        "reps": 15,
+        "secondary": [
+            "fessiers",
+            "ischio"
+        ]
+    },
+    {
+        "id": "Dorseaux",
+        "name": "Rowing T-bar",
+        "path": "../assets/workout-images/dos_11.gif",
+        "set": 3,
+        "reps": 8,
+        "secondary": [
+            "épaules"
+        ]
+    }
+]
