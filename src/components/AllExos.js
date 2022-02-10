@@ -10,13 +10,13 @@ export default function AllExos(props) {
                         <h2 className='text-xl'>{exo.name}</h2>
                         <p>Nombre de séries : {exo.set}</p>
                         <p>Nombre de rép : {exo.reps}</p>
-                        <p>Muscles solicités : <br />
+                        {exo.secondary ? <p>Muscles solicités : <br />
                             <span className='space-x-2'>
                                 {exo?.secondary?.map(k => {
                                     return <span className='bg-white px-1 rounded-md' key={k}>{k}</span>
                                 })}
                             </span>
-                        </p>
+                        </p> : null}
                     </div>
                 </div>
             </div>

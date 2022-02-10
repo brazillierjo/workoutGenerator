@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import workoutexercices from '../data/workoutexercices.json';
 import AllExos from '../components/AllExos';
 import { Tab } from '@headlessui/react'
+import FilteredExos from '../components/FilteredExos';
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
@@ -39,7 +40,7 @@ export default function Lists() {
                 </Tab.List>
                 <Tab.Panels>
                     <Tab.Panel><AllExos exercices={exercices} /></Tab.Panel>
-                    <Tab.Panel>Content 2</Tab.Panel>
+                    <Tab.Panel><FilteredExos exercices={exercices} /></Tab.Panel>
                 </Tab.Panels>
             </Tab.Group>
         </div>
