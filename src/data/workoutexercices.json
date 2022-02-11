@@ -278,5 +278,356 @@
         "secondary": [
             "épaules"
         ]
+    },
+    {
+        "id": "Abdominaux",
+        "name": "Relevé de jambes suspendu",
+        "path": "../assets/workout-images/abdos_1.gif",
+        "set": 3,
+        "reps": "Max",
+        "secondary": [
+            "Quadriceps"
+        ]
+    },
+    {
+        "id": "Abdominaux",
+        "name": "Rotation du buste debout à la poulie",
+        "path": "../assets/workout-images/abdos_2.gif",
+        "set": 5,
+        "reps": "Max"
+    },
+    {
+        "id": "Abdominaux",
+        "name": "Planche latérale",
+        "path": "../assets/workout-images/abdos_3.gif",
+        "set": 2,
+        "reps": "Tps. max"
+    },
+    {
+        "id": "Abdominaux",
+        "name": "Ergomètre de ski",
+        "path": "../assets/workout-images/abdos_4.gif",
+        "set": 4,
+        "reps": "Max",
+        "secondary": [
+            "Full body"
+        ]
+    },
+    {
+        "id": "Abdominaux",
+        "name": "Rotations des abdominaux suspendu",
+        "path": "../assets/workout-images/abdos_5.gif",
+        "set": 3,
+        "reps": "6 (de chaques côtés)"
+    },
+    {
+        "id": "Abdominaux",
+        "name": "Rotations du buste avec barre",
+        "path": "../assets/workout-images/abdos_6.gif",
+        "set": 4,
+        "reps": 20
+    },
+    {
+        "id": "Abdominaux",
+        "name": "Crunch décliné",
+        "path": "../assets/workout-images/abdos_7.gif",
+        "set": 4,
+        "reps": 20
+    },
+    {
+        "id": "Abdominaux",
+        "name": "Burpees",
+        "path": "../assets/workout-images/abdos_8.gif",
+        "set": 5,
+        "reps": "Max",
+        "secondary": [
+            "Full body"
+        ]
+    },
+    {
+        "id": "Abdominaux",
+        "name": "Crunch au sol",
+        "path": "../assets/workout-images/abdos_9.gif",
+        "set": 3,
+        "reps": "Max"
+    },
+    {
+        "id": "Abdominaux",
+        "name": "Crunch à la poulie",
+        "path": "../assets/workout-images/abdos_11.gif",
+        "set": 4,
+        "reps": "Max"
+    },
+    {
+        "id": "Épaules",
+        "name": "Face pull",
+        "path": "../assets/workout-images/shoulder_1.gif",
+        "set": 4,
+        "reps": "12",
+        "secondary": [
+            "Dorseaux"
+        ]
+    },
+    {
+        "id": "Épaules",
+        "name": "Thruster avec kettlebell",
+        "path": "../assets/workout-images/shoulder_2.gif",
+        "set": 3,
+        "reps": 12,
+        "secondary": [
+            "Quadriceps",
+            "Mollets"
+        ]
+    },
+    {
+        "id": "Épaules",
+        "name": "Élévations latérales avec kettlebell",
+        "path": "../assets/workout-images/shoulder_3.gif",
+        "set": 4,
+        "reps": 8,
+        "secondary": [
+            "Quadriceps",
+            "Mollets"
+        ]
+    },
+    {
+        "id": "Épaules",
+        "name": "Pec deck inversé",
+        "path": "../assets/workout-images/shoulder_4.gif",
+        "set": 4,
+        "reps": 10,
+        "secondary": [
+            "Dorseaux"
+        ]
+    },
+    {
+        "id": "Épaules",
+        "name": "Tirage menton barre guidée",
+        "path": "../assets/workout-images/shoulder_5.gif",
+        "set": 4,
+        "reps": 14
+    },
+    {
+        "id": "Épaules",
+        "name": "Élévations latérales avec landmine",
+        "path": "../assets/workout-images/shoulder_6.gif",
+        "set": 4,
+        "reps": 8
+    },
+    {
+        "id": "Épaules",
+        "name": "Oiseau assis sur un banc",
+        "path": "../assets/workout-images/shoulder_7.gif",
+        "set": 4,
+        "reps": 10,
+        "secondary": [
+            "Dorseaux"
+        ]
+    },
+    {
+        "id": "Épaules",
+        "name": "Élévations frontales",
+        "path": "../assets/workout-images/shoulder_8.gif",
+        "set": 4,
+        "reps": 10,
+        "secondary": [
+            "Pectoraux"
+        ]
+    },
+    {
+        "id": "Épaules",
+        "name": "Développé Arnold",
+        "path": "../assets/workout-images/shoulder_9.gif",
+        "set": 4,
+        "reps": 8,
+        "secondary": [
+            "Triceps"
+        ]
+    },
+    {
+        "id": "Épaules",
+        "name": "Développé militaire",
+        "path": "../assets/workout-images/shoulder_10.gif",
+        "set": 4,
+        "reps": 8,
+        "secondary": [
+            "Triceps"
+        ]
+    },
+    {
+        "id": "Triceps",
+        "name": "Extensions des triceps à la machine",
+        "path": "../assets/workout-images/triceps_1.gif",
+        "set": 4,
+        "reps": 12
+    },
+    {
+        "id": "Triceps",
+        "name": "Tate press à un bras avec haltère",
+        "path": "../assets/workout-images/triceps_2.gif",
+        "set": 4,
+        "reps": 10
+    },
+    {
+        "id": "Triceps",
+        "name": "Dips",
+        "path": "../assets/workout-images/triceps_3.gif",
+        "set": 4,
+        "reps": 15,
+        "secondary": [
+            "Pectoraux"
+        ]
+    },
+    {
+        "id": "Triceps",
+        "name": "Pompes",
+        "path": "../assets/workout-images/triceps_4.gif",
+        "set": 4,
+        "reps": 8,
+        "secondary": [
+            "Pectoraux"
+        ]
+    },
+    {
+        "id": "Triceps",
+        "name": "Extensions triceps à la poulie haute",
+        "path": "../assets/workout-images/triceps_5.gif",
+        "set": 4,
+        "reps": 12
+    },
+    {
+        "id": "Triceps",
+        "name": "Kickback",
+        "path": "../assets/workout-images/triceps_6.gif",
+        "set": 4,
+        "reps": 8
+    },
+    {
+        "id": "Triceps",
+        "name": "Barre front",
+        "path": "../assets/workout-images/triceps_7.gif",
+        "set": 4,
+        "reps": 8
+    },
+    {
+        "id": "Triceps",
+        "name": "Dips aux barres parallèles",
+        "path": "../assets/workout-images/triceps_8.gif",
+        "set": 4,
+        "reps": 8,
+        "secondary": [
+            "Pectoraux"
+        ]
+    },
+    {
+        "id": "Triceps",
+        "name": "Extensions des triceps incliné à la poulie basse",
+        "path": "../assets/workout-images/triceps_9.gif",
+        "set": 4,
+        "reps": 8,
+        "secondary": [
+            "Pectoraux"
+        ]
+    },
+    {
+        "id": "Fessiers",
+        "name": "Good morning",
+        "path": "../assets/workout-images/fessiers_1.gif",
+        "set": 4,
+        "reps": 8,
+        "secondary": [
+            "Quadriceps"
+        ]
+    },
+    {
+        "id": "Fessiers",
+        "name": "Soulevé de terre roumain à la landmine",
+        "path": "../assets/workout-images/fessiers_2.gif",
+        "set": 3,
+        "reps": 15,
+        "secondary": [
+            "Quadriceps",
+            "Mollets"
+        ]
+    },
+    {
+        "id": "Fessiers",
+        "name": "Rack pull",
+        "path": "../assets/workout-images/fessiers_3.gif",
+        "set": 4,
+        "reps": 12,
+        "secondary": [
+            "Quadriceps",
+            "Ischios",
+            "Dorseaux"
+        ]
+    },
+    {
+        "id": "Fessiers",
+        "name": "Squat avec landmine",
+        "path": "../assets/workout-images/fessiers_4.gif",
+        "set": 4,
+        "reps": 8,
+        "secondary": [
+            "Quadriceps"
+        ]
+    },
+    {
+        "id": "Fessiers",
+        "name": "Squat cosaque",
+        "path": "../assets/workout-images/fessiers_5.gif",
+        "set": 4,
+        "reps": "7 (de chaques côtés)"
+    },
+    {
+        "id": "Fessiers",
+        "name": "Hip thrust",
+        "path": "../assets/workout-images/fessiers_6.gif",
+        "set": 4,
+        "reps": 8,
+        "secondary": [
+            "Quadriceps",
+            "Ischios"
+        ]
+    },
+    {
+        "id": "Fessiers",
+        "name": "Thruster avec kettlebell",
+        "path": "../assets/workout-images/fessiers_7.gif",
+        "set": 4,
+        "reps": 8,
+        "secondary": [
+            "Quadriceps",
+            "Ischios",
+            "Épaules"
+        ]
+    },
+    {
+        "id": "Fessiers",
+        "name": "Squat barre devant",
+        "path": "../assets/workout-images/fessiers_8.gif",
+        "set": 4,
+        "reps": 8
+    },
+    {
+        "id": "Fessiers",
+        "name": "Pistol squat",
+        "path": "../assets/workout-images/fessiers_9.gif",
+        "set": 4,
+        "reps": 8,
+        "secondary": [
+            "Quadriceps"
+        ]
+    },
+    {
+        "id": "Fessiers",
+        "name": "Fentes avant avec kettlebell",
+        "path": "../assets/workout-images/fessiers_10.gif",
+        "set": 4,
+        "reps": 8,
+        "secondary": [
+            "Quadriceps",
+            "Mollets"
+        ]
     }
 ]
