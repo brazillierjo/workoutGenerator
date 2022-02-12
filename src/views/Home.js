@@ -159,13 +159,17 @@ export default function Home() {
             }
         }
         setWorkout(workout)
-        console.log('workout', workout)
     }
 
-    function handleDisplay() {
-        let actualDiv = document.getElementById('displayedDiv')
-        let nextDiv = actualDiv.nextSibling
-        nextDiv.classList.remove('hidden')
+    function handleChecked(e) {
+        let upperDiv = e.target.parentNode
+        if (e.target.checked) {
+            upperDiv.classList.add('border-4', 'border-teal-500')
+        }
+        if (!e.target.checked) {
+            upperDiv.classList.remove('border-4', 'border-teal-500')
+        }
+
     }
 
     return (
@@ -206,12 +210,17 @@ export default function Home() {
                             </Select>
                         </FormControl>
                     </div>
-                    <div className='text-center my-2'>
-                        <Divider>Ajouter un groupe musculaire<button onClick={handleDisplay} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button></Divider>
+                    <div id='divPlus1' className='text-center my-2'>
+                        <Divider>Ajouter un groupe musculaire
+                            <button onClick={() => {
+                                document.getElementById('div2').classList.remove('hidden')
+                                document.getElementById('divPlus1').classList.add('hidden')
+                            }} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button>
+                        </Divider>
                     </div>
                 </div>
 
-                <div className='hidden'>
+                <div id='div2' className='hidden'>
                     <div className='flex justify-between my-2'>
                         <FormControl className='w-8/12'>
                             <InputLabel>Groupe musculaire</InputLabel>
@@ -244,12 +253,17 @@ export default function Home() {
                             </Select>
                         </FormControl>
                     </div>
-                    <div className='text-center my-2'>
-                        <Divider>Ajouter un groupe musculaire<button onClick={handleDisplay} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button></Divider>
+                    <div id='divPlus2' className='text-center my-2'>
+                        <Divider>Ajouter un groupe musculaire
+                            <button onClick={() => {
+                                document.getElementById('div3').classList.remove('hidden')
+                                document.getElementById('divPlus2').classList.add('hidden')
+                            }} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button>
+                        </Divider>
                     </div>
                 </div>
 
-                <div className='hidden'>
+                <div id='div3' className='hidden'>
                     <div className='flex justify-between my-2'>
                         <FormControl className='w-8/12'>
                             <InputLabel>Groupe musculaire</InputLabel>
@@ -282,13 +296,18 @@ export default function Home() {
                             </Select>
                         </FormControl>
                     </div>
-                    <div className='text-center my-2'>
-                        <Divider>Ajouter un groupe musculaire<button onClick={handleDisplay} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button></Divider>
+                    <div id='divPlus3' className='text-center my-2'>
+                        <Divider>Ajouter un groupe musculaire
+                            <button onClick={() => {
+                                document.getElementById('div4').classList.remove('hidden')
+                                document.getElementById('divPlus3').classList.add('hidden')
+                            }} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button>
+                        </Divider>
                     </div>
                 </div>
 
-                <div className='hidden'>
-                    <div className='justify-between my-2'>
+                <div id='div4' className='hidden'>
+                    <div className='flex justify-between my-2'>
                         <FormControl className='w-8/12'>
                             <InputLabel>Groupe musculaire</InputLabel>
                             <Select
@@ -320,13 +339,18 @@ export default function Home() {
                             </Select>
                         </FormControl>
                     </div>
-                    <div className='text-center my-2'>
-                        <Divider>Ajouter un groupe musculaire<button onClick={handleDisplay} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button></Divider>
+                    <div id='divPlus4' className='text-center my-2'>
+                        <Divider>Ajouter un groupe musculaire
+                            <button onClick={() => {
+                                document.getElementById('div5').classList.remove('hidden')
+                                document.getElementById('divPlus4').classList.add('hidden')
+                            }} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button>
+                        </Divider>
                     </div>
                 </div>
 
-                <div className='hidden'>
-                    <div className='justify-between my-2'>
+                <div id='div5' className='hidden'>
+                    <div className='flex justify-between my-2'>
                         <FormControl className='w-8/12'>
                             <InputLabel>Groupe musculaire</InputLabel>
                             <Select
@@ -358,13 +382,18 @@ export default function Home() {
                             </Select>
                         </FormControl>
                     </div>
-                    <div className='text-center my-2'>
-                        <Divider>Ajouter un groupe musculaire<button onClick={handleDisplay} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button></Divider>
+                    <div id='divPlus5' className='text-center my-2'>
+                        <Divider>Ajouter un groupe musculaire
+                            <button onClick={() => {
+                                document.getElementById('div6').classList.remove('hidden')
+                                document.getElementById('divPlus5').classList.add('hidden')
+                            }} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button>
+                        </Divider>
                     </div>
                 </div>
 
-                <div className='hidden'>
-                    <div className='justify-between my-2'>
+                <div id='div6' className='hidden'>
+                    <div className='flex justify-between my-2'>
                         <FormControl className='w-8/12'>
                             <InputLabel>Groupe musculaire</InputLabel>
                             <Select
@@ -396,13 +425,18 @@ export default function Home() {
                             </Select>
                         </FormControl>
                     </div>
-                    <div className='text-center my-2'>
-                        <Divider>Ajouter un groupe musculaire<button onClick={handleDisplay} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button></Divider>
+                    <div id='divPlus6' className='text-center my-2'>
+                        <Divider>Ajouter un groupe musculaire
+                            <button onClick={() => {
+                                document.getElementById('div7').classList.remove('hidden')
+                                document.getElementById('divPlus6').classList.add('hidden')
+                            }} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button>
+                        </Divider>
                     </div>
                 </div>
 
-                <div className='hidden'>
-                    <div className='justify-between my-2'>
+                <div id='div7' className='hidden'>
+                    <div className='flex justify-between my-2'>
                         <FormControl className='w-8/12'>
                             <InputLabel>Groupe musculaire</InputLabel>
                             <Select
@@ -434,13 +468,18 @@ export default function Home() {
                             </Select>
                         </FormControl>
                     </div>
-                    <div className='text-center my-2'>
-                        <Divider>Ajouter un groupe musculaire<button onClick={handleDisplay} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button></Divider>
+                    <div id='divPlus7' className='text-center my-2'>
+                        <Divider>Ajouter un groupe musculaire
+                            <button onClick={() => {
+                                document.getElementById('div8').classList.remove('hidden')
+                                document.getElementById('divPlus7').classList.add('hidden')
+                            }} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button>
+                        </Divider>
                     </div>
                 </div>
 
-                <div className='hidden'>
-                    <div className='justify-between my-2'>
+                <div id='div8' className='hidden'>
+                    <div className='flex justify-between my-2'>
                         <FormControl className='w-8/12'>
                             <InputLabel>Groupe musculaire</InputLabel>
                             <Select
@@ -472,13 +511,18 @@ export default function Home() {
                             </Select>
                         </FormControl>
                     </div>
-                    <div className='text-center my-2'>
-                        <Divider>Ajouter un groupe musculaire<button onClick={handleDisplay} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button></Divider>
+                    <div id='divPlus8' className='text-center my-2'>
+                        <Divider>Ajouter un groupe musculaire
+                            <button onClick={() => {
+                                document.getElementById('div9').classList.remove('hidden')
+                                document.getElementById('divPlus8').classList.add('hidden')
+                            }} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button>
+                        </Divider>
                     </div>
                 </div>
 
-                <div className='hidden'>
-                    <div className='justify-between my-2'>
+                <div id='div9' className='hidden'>
+                    <div className='flex justify-between my-2'>
                         <FormControl className='w-8/12'>
                             <InputLabel>Groupe musculaire</InputLabel>
                             <Select
@@ -524,7 +568,8 @@ export default function Home() {
 
             </div>
             {workout?.map(x => {
-                return <div className='bg-gray-200 p-4 rounded-md my-3 mx-2' key={x.name}>
+                return <div className='relative bg-gray-200 p-4 rounded-md my-3 mx-2' key={x.name}>
+                    <input onClick={handleChecked} className='absolute right-0 top-0' type="checkbox" />
                     <div className='flex'>
                         <img className='w-2/6 rounded mr-5' src={`${x.path}`} alt={x.name} />
                         <div className='w-4/6'>
