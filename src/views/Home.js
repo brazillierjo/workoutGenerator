@@ -43,7 +43,7 @@ export default function Home() {
             <div className='bg-gray-200 rounded-md p-3 m-3'>
                 <h1 className='text-2xl text-center mb-4'>Ma séance personnalisée</h1>
                 <div className='flex justify-between'>
-                    <FormControl className='w-5/12'>
+                    <FormControl className='w-8/12'>
                         <InputLabel>Groupe musculaire</InputLabel>
                         <Select
                             label="Groupe musculaire"
@@ -54,7 +54,7 @@ export default function Home() {
                             })}
                         </Select>
                     </FormControl>
-                    <FormControl className='w-5/12'>
+                    <FormControl className='w-3/12'>
                         <InputLabel>Nombre d'exos</InputLabel>
                         <Select
                             label="Nombre d'exos"
