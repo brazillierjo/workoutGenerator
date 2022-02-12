@@ -359,7 +359,7 @@
         "reps": "Max"
     },
     {
-        "id": "Épaules",
+        "id": "Epaules",
         "name": "Face pull",
         "path": "../assets/workout-images/shoulder_1.gif",
         "set": 4,
@@ -369,7 +369,7 @@
         ]
     },
     {
-        "id": "Épaules",
+        "id": "Epaules",
         "name": "Thruster avec kettlebell",
         "path": "../assets/workout-images/shoulder_2.gif",
         "set": 3,
@@ -380,7 +380,7 @@
         ]
     },
     {
-        "id": "Épaules",
+        "id": "Epaules",
         "name": "Élévations latérales avec kettlebell",
         "path": "../assets/workout-images/shoulder_3.gif",
         "set": 4,
@@ -391,7 +391,7 @@
         ]
     },
     {
-        "id": "Épaules",
+        "id": "Epaules",
         "name": "Pec deck inversé",
         "path": "../assets/workout-images/shoulder_4.gif",
         "set": 4,
@@ -401,21 +401,21 @@
         ]
     },
     {
-        "id": "Épaules",
+        "id": "Epaules",
         "name": "Tirage menton barre guidée",
         "path": "../assets/workout-images/shoulder_5.gif",
         "set": 4,
         "reps": 14
     },
     {
-        "id": "Épaules",
+        "id": "Epaules",
         "name": "Élévations latérales avec landmine",
         "path": "../assets/workout-images/shoulder_6.gif",
         "set": 4,
         "reps": 8
     },
     {
-        "id": "Épaules",
+        "id": "Epaules",
         "name": "Oiseau assis sur un banc",
         "path": "../assets/workout-images/shoulder_7.gif",
         "set": 4,
@@ -425,7 +425,7 @@
         ]
     },
     {
-        "id": "Épaules",
+        "id": "Epaules",
         "name": "Élévations frontales",
         "path": "../assets/workout-images/shoulder_8.gif",
         "set": 4,
@@ -435,7 +435,7 @@
         ]
     },
     {
-        "id": "Épaules",
+        "id": "Epaules",
         "name": "Développé Arnold",
         "path": "../assets/workout-images/shoulder_9.gif",
         "set": 4,
@@ -445,7 +445,7 @@
         ]
     },
     {
-        "id": "Épaules",
+        "id": "Epaules",
         "name": "Développé militaire",
         "path": "../assets/workout-images/shoulder_10.gif",
         "set": 4,
@@ -599,7 +599,7 @@
         "secondary": [
             "Quadriceps",
             "Ischios",
-            "Épaules"
+            "Epaules"
         ]
     },
     {

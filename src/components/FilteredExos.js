@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function FilteredExos(props) {
-    const [selectedMuscle, setSelectedMuscle] = React.useState('Pectoraux');
+    const [selectedMuscle, setSelectedMuscle] = React.useState('Abdominaux');
     const [group, setGroup] = React.useState()
 
     React.useEffect(() => {
@@ -10,6 +10,7 @@ export default function FilteredExos(props) {
         })
         let x = [groupFilter]
         x = x.flat().filter((v, i, a) => a.indexOf(v) === i)
+        x.sort()
         setGroup(x)
     }, [props.exercices])
 
