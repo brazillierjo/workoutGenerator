@@ -5,7 +5,7 @@ import MenuItem from '@mui/material/MenuItem'
 import FormControl from '@mui/material/FormControl'
 import Select from '@mui/material/Select'
 import Divider from '@mui/material/Divider'
-import { BsArrowUpShort, BsArrowDownShort } from 'react-icons/bs'
+import { AiFillCaretLeft, AiFillCaretRight } from 'react-icons/ai'
 
 export default function Home() {
     const [group, setGroup] = React.useState([])
@@ -171,10 +171,10 @@ export default function Home() {
     function handleChecked(e) {
         let upperDiv = e.target.parentNode
         if (e.target.checked) {
-            upperDiv.classList.add('border-teal-500')
+            upperDiv.classList.add('border-cyan-500')
         }
         if (!e.target.checked) {
-            upperDiv.classList.remove('border-teal-500')
+            upperDiv.classList.remove('border-cyan-500')
         }
 
     }
@@ -568,12 +568,12 @@ export default function Home() {
                         <button onClick={generateWorkout}
                             className="rounded-full bg-cyan-500 hover:border-teal-500 px-10 py-2"
                         >
-                            <BsArrowDownShort size={25} color='white' />
+                            <AiFillCaretRight size={15} color='white' />
                         </button>
                     </div>
                 </div> :
-                <div className='text-center'>
-                    <button className='px-10 py-2 rounded-full mt-2 mb-4 bg-gray-200' onClick={() => setShowGenerator(true)}><BsArrowUpShort className='mx-auto' color='#06B6D4' size={25} /></button>
+                <div className='ml-2 mt-2 mb-2'>
+                    <button className='px-1 py-1 rounded-full bg-gray-200' onClick={() => setShowGenerator(true)}><AiFillCaretLeft className='mx-auto' color='#06B6D4' size={15} /></button>
                 </div>
             }
 
