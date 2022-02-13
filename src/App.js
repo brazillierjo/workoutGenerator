@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import Home from './views/Home'
 import Lists from './views/Lists'
@@ -16,6 +17,7 @@ function App() {
           <Route exact path='/error' element={<NotFound />} />
         </Routes>
       </Fragment>
+      <Footer />
     </Router>
   );
 }

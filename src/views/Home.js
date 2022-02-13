@@ -164,10 +164,10 @@ export default function Home() {
     function handleChecked(e) {
         let upperDiv = e.target.parentNode
         if (e.target.checked) {
-            upperDiv.classList.add('border-4', 'border-teal-500')
+            upperDiv.classList.add('border-teal-500')
         }
         if (!e.target.checked) {
-            upperDiv.classList.remove('border-4', 'border-teal-500')
+            upperDiv.classList.remove('border-teal-500')
         }
 
     }
@@ -560,7 +560,7 @@ export default function Home() {
 
                 <div className='text-center mt-4'>
                     <button onClick={generateWorkout}
-                        className="border-2 text-xl rounded hover:bg-teal-500 hover:text-white border-teal-500 px-4 py-2"
+                        className="border-2 text-md rounded hover:bg-teal-500 hover:text-white border-teal-500 px-4 py-2"
                     >
                         Générer ma séance
                     </button>
@@ -568,15 +568,15 @@ export default function Home() {
 
             </div>
             {workout?.map(x => {
-                return <div className='relative bg-gray-200 p-4 rounded-md my-3 mx-2' key={x.name}>
-                    <input onClick={handleChecked} className='absolute right-0 top-0' type="checkbox" />
+                return <div className='border-2 relative bg-gray-200 p-4 rounded-md my-3 mx-2' key={x.name}>
+                    <input onClick={handleChecked} className='absolute w-6 h-6 right-2 top-2 text-teal-500' type="checkbox" />
                     <div className='flex'>
                         <img className='w-2/6 rounded mr-5' src={`${x.path}`} alt={x.name} />
                         <div className='w-4/6'>
                             <h2 className='text-xl'>{x.name}</h2>
                             <p>Nombre de séries : {x.set}</p>
                             <p>Nombre de rép : {x.reps}</p>
-                            {x.secondary ? <p>Muscles solicités : <br />
+                            {x.secondary ? <p>Autre muscle solicité : <br />
                                 <span className='space-x-2'>
                                     {x?.secondary?.map(k => {
                                         return <span className='bg-white px-1 rounded-md' key={k}>{k}</span>

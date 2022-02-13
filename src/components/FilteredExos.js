@@ -20,6 +20,7 @@ export default function FilteredExos(props) {
                 return <button className={selectedMuscle === group ? 'bg-teal-500 shadow px-6 py-2.5 text-sm leading-5 font-medium text-white rounded-md outline-none focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60' : 'px-6 py-2 rounded-md'} key={group} onClick={() => setSelectedMuscle(group)}>{group}</button>
             })}
         </div>
+        <br />
         {
             props.exercices.map(exo => {
                 if (exo.id === selectedMuscle) {

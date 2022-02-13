@@ -1,11 +1,11 @@
 @font-face {
-  font-family: "Boogaloo-Regular";
-  src: url("./data/Boogaloo-Regular.ttf") format("truetype");
+  font-family: "SFProText";
+  src: url("./data/SFProText.ttf") format("truetype");
  }
  
 body {
   margin: 0;
-  font-family: 'Boogaloo-Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'SFProText', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
