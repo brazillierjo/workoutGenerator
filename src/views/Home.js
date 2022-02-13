@@ -223,7 +223,7 @@ export default function Home() {
                                 <button onClick={() => {
                                     document.getElementById('div2').classList.remove('hidden')
                                     document.getElementById('divPlus1').classList.add('hidden')
-                                }} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button>
+                                }} className='rounded-full bg-cyan-500 text-white px-2 ml-2'>+</button>
                             </Divider>
                         </div>
                     </div>
@@ -266,7 +266,7 @@ export default function Home() {
                                 <button onClick={() => {
                                     document.getElementById('div3').classList.remove('hidden')
                                     document.getElementById('divPlus2').classList.add('hidden')
-                                }} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button>
+                                }} className='rounded-full bg-cyan-500 text-white px-1 ml-3'>+</button>
                             </Divider>
                         </div>
                     </div>
@@ -309,7 +309,7 @@ export default function Home() {
                                 <button onClick={() => {
                                     document.getElementById('div4').classList.remove('hidden')
                                     document.getElementById('divPlus3').classList.add('hidden')
-                                }} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button>
+                                }} className='rounded-full bg-cyan-500 text-white px-1 ml-3'>+</button>
                             </Divider>
                         </div>
                     </div>
@@ -352,7 +352,7 @@ export default function Home() {
                                 <button onClick={() => {
                                     document.getElementById('div5').classList.remove('hidden')
                                     document.getElementById('divPlus4').classList.add('hidden')
-                                }} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button>
+                                }} className='rounded-full bg-cyan-500 text-white px-1 ml-3'>+</button>
                             </Divider>
                         </div>
                     </div>
@@ -395,7 +395,7 @@ export default function Home() {
                                 <button onClick={() => {
                                     document.getElementById('div6').classList.remove('hidden')
                                     document.getElementById('divPlus5').classList.add('hidden')
-                                }} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button>
+                                }} className='rounded-full bg-cyan-500 text-white px-1 ml-3'>+</button>
                             </Divider>
                         </div>
                     </div>
@@ -438,7 +438,7 @@ export default function Home() {
                                 <button onClick={() => {
                                     document.getElementById('div7').classList.remove('hidden')
                                     document.getElementById('divPlus6').classList.add('hidden')
-                                }} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button>
+                                }} className='rounded-full bg-cyan-500 text-white px-1 ml-3'>+</button>
                             </Divider>
                         </div>
                     </div>
@@ -481,7 +481,7 @@ export default function Home() {
                                 <button onClick={() => {
                                     document.getElementById('div8').classList.remove('hidden')
                                     document.getElementById('divPlus7').classList.add('hidden')
-                                }} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button>
+                                }} className='rounded-full bg-cyan-500 text-white px-1 ml-3'>+</button>
                             </Divider>
                         </div>
                     </div>
@@ -524,7 +524,7 @@ export default function Home() {
                                 <button onClick={() => {
                                     document.getElementById('div9').classList.remove('hidden')
                                     document.getElementById('divPlus8').classList.add('hidden')
-                                }} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button>
+                                }} className='rounded-full bg-cyan-500 text-white px-1 ml-3'>+</button>
                             </Divider>
                         </div>
                     </div>
@@ -566,15 +566,14 @@ export default function Home() {
 
                     <div className='text-center mt-4'>
                         <button onClick={generateWorkout}
-                            className="rounded-full bg-teal-500 hover:border-teal-500 px-4"
+                            className="rounded-full bg-cyan-500 hover:border-teal-500 px-10 py-2"
                         >
                             <BsArrowDownShort size={25} color='white' />
                         </button>
                     </div>
-
                 </div> :
                 <div className='text-center'>
-                    <button className='px-4 rounded-full my-2 bg-gray-200' onClick={() => setShowGenerator(true)}><BsArrowUpShort className='mx-auto' color='teal' size={25} /></button>
+                    <button className='px-10 py-2 rounded-full mt-2 mb-4 bg-gray-200' onClick={() => setShowGenerator(true)}><BsArrowUpShort className='mx-auto' color='#06B6D4' size={25} /></button>
                 </div>
             }
 
@@ -585,7 +584,7 @@ export default function Home() {
                     <div className='flex'>
                         <img className='w-2/6 rounded mr-5' src={`${x.path}`} alt={x.name} />
                         <div className='w-4/6'>
-                            <h2 className='text-lg w-11/12'>{x.name}</h2>
+                            <h2 className='text-lg mb-3 w-11/12'>{x.name}</h2>
                             <p>Séries : {x.set}</p>
                             <p>Répétitions : {x.reps}</p>
                             {x.secondary ? <p>Autre muscle solicité : <br />
