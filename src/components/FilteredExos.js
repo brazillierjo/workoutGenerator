@@ -24,17 +24,17 @@ export default function FilteredExos(props) {
         {
             props.exercices.map(exo => {
                 if (exo.id === selectedMuscle) {
-                    return <div className='bg-gray-200 p-4 rounded-md my-3 mx-2' key={exo.name}>
+                    return <div className='bg-gray-200 p-2 text-sm rounded-md my-3 mx-2' key={exo.name}>
                         <div className='flex'>
                             <img className='w-2/6 rounded mr-5' src={`${exo.path}`} alt={exo.name} />
                             <div className='w-4/6'>
-                                <h2 className='text-xl'>{exo.name}</h2>
+                                <h2 className='text-lg w-11/12'>{exo.name}</h2>
                                 <p>Nombre de séries : {exo.set}</p>
                                 <p>Nombre de rép : {exo.reps}</p>
                                 {exo.secondary ? <p>Muscles solicités : <br />
-                                    <span className='space-x-2'>
+                                    <span className='space-x-2 flex flex-wrap'>
                                         {exo?.secondary?.map(k => {
-                                            return <span className='bg-white px-1 rounded-md' key={k}>{k}</span>
+                                            return <span className='bg-white px-1 mt-1 rounded-md' key={k}>{k}</span>
                                         })}
                                     </span>
                                 </p> : null}

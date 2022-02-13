@@ -5,10 +5,12 @@ import MenuItem from '@mui/material/MenuItem'
 import FormControl from '@mui/material/FormControl'
 import Select from '@mui/material/Select'
 import Divider from '@mui/material/Divider'
+import { BsArrowUpShort, BsArrowDownShort } from 'react-icons/bs'
 
 export default function Home() {
     const [group, setGroup] = React.useState([])
     const [workout, setWorkout] = React.useState([])
+    const [showGenerator, setShowGenerator] = React.useState(true)
 
     const [muscle1, setMuscle1] = React.useState('')
     const [nbr1, setNbr1] = React.useState(0)
@@ -163,6 +165,7 @@ export default function Home() {
         }
         setWorkout(workout)
         localStorage.setItem('workout', JSON.stringify(workout))
+        if (workout.length > 0) setShowGenerator(false)
     }
 
     function handleChecked(e) {
@@ -178,414 +181,417 @@ export default function Home() {
 
     return (
         <div>
-            <div className='bg-gray-200 rounded-md p-3 m-3'>
-                <h1 className='text-2xl text-center mb-4'>Ma séance personnalisée</h1>
+            {showGenerator ?
+                <div className='bg-gray-200 rounded-md p-3 m-3'>
+                    <h1 className='text-xl text-center mb-4'>Quel groupe musculaire doit-on travailler ?</h1>
 
-                <div id='displayedDiv'>
-                    <div className='flex justify-between my-2'>
-                        <FormControl className='w-8/12'>
-                            <InputLabel>Groupe musculaire</InputLabel>
-                            <Select
-                                label="Groupe musculaire"
-                                value={muscle1}
-                                onChange={(e) => setMuscle1(e.target.value)}>
-                                {group.map(a => {
-                                    return <MenuItem value={a} key={a}>{a}</MenuItem>
-                                })}
-                            </Select>
-                        </FormControl>
-                        <FormControl className='w-3/12'>
-                            <InputLabel>Nombre d'exos</InputLabel>
-                            <Select
-                                label="Nombre d'exos"
-                                value={nbr1}
-                                onChange={(e) => setNbr1(e.target.value)}>
-                                <MenuItem value={0}>0</MenuItem>
-                                <MenuItem value={1}>1</MenuItem>
-                                <MenuItem value={2}>2</MenuItem>
-                                <MenuItem value={3}>3</MenuItem>
-                                <MenuItem value={4}>4</MenuItem>
-                                <MenuItem value={5}>5</MenuItem>
-                                <MenuItem value={6}>6</MenuItem>
-                                <MenuItem value={7}>7</MenuItem>
-                                <MenuItem value={8}>8</MenuItem>
-                                <MenuItem value={9}>9</MenuItem>
-                                <MenuItem value={10}>10</MenuItem>
-                            </Select>
-                        </FormControl>
+                    <div id='displayedDiv'>
+                        <div className='flex justify-between my-2'>
+                            <FormControl className='w-7/12'>
+                                <InputLabel>Groupe musculaire</InputLabel>
+                                <Select
+                                    label="Groupe musculaire"
+                                    value={muscle1}
+                                    onChange={(e) => setMuscle1(e.target.value)}>
+                                    {group.map(a => {
+                                        return <MenuItem value={a} key={a}>{a}</MenuItem>
+                                    })}
+                                </Select>
+                            </FormControl>
+                            <FormControl className='w-4/12'>
+                                <InputLabel>Nombre d'exos</InputLabel>
+                                <Select
+                                    label="Nombre d'exos"
+                                    value={nbr1}
+                                    onChange={(e) => setNbr1(e.target.value)}>
+                                    <MenuItem value={0}>0</MenuItem>
+                                    <MenuItem value={1}>1</MenuItem>
+                                    <MenuItem value={2}>2</MenuItem>
+                                    <MenuItem value={3}>3</MenuItem>
+                                    <MenuItem value={4}>4</MenuItem>
+                                    <MenuItem value={5}>5</MenuItem>
+                                    <MenuItem value={6}>6</MenuItem>
+                                    <MenuItem value={7}>7</MenuItem>
+                                    <MenuItem value={8}>8</MenuItem>
+                                    <MenuItem value={9}>9</MenuItem>
+                                    <MenuItem value={10}>10</MenuItem>
+                                </Select>
+                            </FormControl>
+                        </div>
+                        <div id='divPlus1' className='text-center my-2'>
+                            <Divider>Ajouter un groupe musculaire
+                                <button onClick={() => {
+                                    document.getElementById('div2').classList.remove('hidden')
+                                    document.getElementById('divPlus1').classList.add('hidden')
+                                }} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button>
+                            </Divider>
+                        </div>
                     </div>
-                    <div id='divPlus1' className='text-center my-2'>
-                        <Divider>Ajouter un groupe musculaire
-                            <button onClick={() => {
-                                document.getElementById('div2').classList.remove('hidden')
-                                document.getElementById('divPlus1').classList.add('hidden')
-                            }} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button>
-                        </Divider>
+
+                    <div id='div2' className='hidden'>
+                        <div className='flex justify-between my-2'>
+                            <FormControl className='w-7/12'>
+                                <InputLabel>Groupe musculaire</InputLabel>
+                                <Select
+                                    label="Groupe musculaire"
+                                    value={muscle2}
+                                    onChange={(e) => setMuscle2(e.target.value)}>
+                                    {group.map(a => {
+                                        return <MenuItem value={a} key={a}>{a}</MenuItem>
+                                    })}
+                                </Select>
+                            </FormControl>
+                            <FormControl className='w-4/12'>
+                                <InputLabel>Nombre d'exos</InputLabel>
+                                <Select
+                                    label="Nombre d'exos"
+                                    value={nbr2}
+                                    onChange={(e) => setNbr2(e.target.value)}>
+                                    <MenuItem value={0}>0</MenuItem>
+                                    <MenuItem value={1}>1</MenuItem>
+                                    <MenuItem value={2}>2</MenuItem>
+                                    <MenuItem value={3}>3</MenuItem>
+                                    <MenuItem value={4}>4</MenuItem>
+                                    <MenuItem value={5}>5</MenuItem>
+                                    <MenuItem value={6}>6</MenuItem>
+                                    <MenuItem value={7}>7</MenuItem>
+                                    <MenuItem value={8}>8</MenuItem>
+                                    <MenuItem value={9}>9</MenuItem>
+                                    <MenuItem value={10}>10</MenuItem>
+                                </Select>
+                            </FormControl>
+                        </div>
+                        <div id='divPlus2' className='text-center my-2'>
+                            <Divider>Ajouter un groupe musculaire
+                                <button onClick={() => {
+                                    document.getElementById('div3').classList.remove('hidden')
+                                    document.getElementById('divPlus2').classList.add('hidden')
+                                }} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button>
+                            </Divider>
+                        </div>
                     </div>
+
+                    <div id='div3' className='hidden'>
+                        <div className='flex justify-between my-2'>
+                            <FormControl className='w-7/12'>
+                                <InputLabel>Groupe musculaire</InputLabel>
+                                <Select
+                                    label="Groupe musculaire"
+                                    value={muscle3}
+                                    onChange={(e) => setMuscle3(e.target.value)}>
+                                    {group.map(a => {
+                                        return <MenuItem value={a} key={a}>{a}</MenuItem>
+                                    })}
+                                </Select>
+                            </FormControl>
+                            <FormControl className='w-4/12'>
+                                <InputLabel>Nombre d'exos</InputLabel>
+                                <Select
+                                    label="Nombre d'exos"
+                                    value={nbr3}
+                                    onChange={(e) => setNbr3(e.target.value)}>
+                                    <MenuItem value={0}>0</MenuItem>
+                                    <MenuItem value={1}>1</MenuItem>
+                                    <MenuItem value={2}>2</MenuItem>
+                                    <MenuItem value={3}>3</MenuItem>
+                                    <MenuItem value={4}>4</MenuItem>
+                                    <MenuItem value={5}>5</MenuItem>
+                                    <MenuItem value={6}>6</MenuItem>
+                                    <MenuItem value={7}>7</MenuItem>
+                                    <MenuItem value={8}>8</MenuItem>
+                                    <MenuItem value={9}>9</MenuItem>
+                                    <MenuItem value={10}>10</MenuItem>
+                                </Select>
+                            </FormControl>
+                        </div>
+                        <div id='divPlus3' className='text-center my-2'>
+                            <Divider>Ajouter un groupe musculaire
+                                <button onClick={() => {
+                                    document.getElementById('div4').classList.remove('hidden')
+                                    document.getElementById('divPlus3').classList.add('hidden')
+                                }} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button>
+                            </Divider>
+                        </div>
+                    </div>
+
+                    <div id='div4' className='hidden'>
+                        <div className='flex justify-between my-2'>
+                            <FormControl className='w-7/12'>
+                                <InputLabel>Groupe musculaire</InputLabel>
+                                <Select
+                                    label="Groupe musculaire"
+                                    value={muscle4}
+                                    onChange={(e) => setMuscle4(e.target.value)}>
+                                    {group.map(a => {
+                                        return <MenuItem value={a} key={a}>{a}</MenuItem>
+                                    })}
+                                </Select>
+                            </FormControl>
+                            <FormControl className='w-4/12'>
+                                <InputLabel>Nombre d'exos</InputLabel>
+                                <Select
+                                    label="Nombre d'exos"
+                                    value={nbr4}
+                                    onChange={(e) => setNbr4(e.target.value)}>
+                                    <MenuItem value={0}>0</MenuItem>
+                                    <MenuItem value={1}>1</MenuItem>
+                                    <MenuItem value={2}>2</MenuItem>
+                                    <MenuItem value={3}>3</MenuItem>
+                                    <MenuItem value={4}>4</MenuItem>
+                                    <MenuItem value={5}>5</MenuItem>
+                                    <MenuItem value={6}>6</MenuItem>
+                                    <MenuItem value={7}>7</MenuItem>
+                                    <MenuItem value={8}>8</MenuItem>
+                                    <MenuItem value={9}>9</MenuItem>
+                                    <MenuItem value={10}>10</MenuItem>
+                                </Select>
+                            </FormControl>
+                        </div>
+                        <div id='divPlus4' className='text-center my-2'>
+                            <Divider>Ajouter un groupe musculaire
+                                <button onClick={() => {
+                                    document.getElementById('div5').classList.remove('hidden')
+                                    document.getElementById('divPlus4').classList.add('hidden')
+                                }} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button>
+                            </Divider>
+                        </div>
+                    </div>
+
+                    <div id='div5' className='hidden'>
+                        <div className='flex justify-between my-2'>
+                            <FormControl className='w-7/12'>
+                                <InputLabel>Groupe musculaire</InputLabel>
+                                <Select
+                                    label="Groupe musculaire"
+                                    value={muscle5}
+                                    onChange={(e) => setMuscle5(e.target.value)}>
+                                    {group.map(a => {
+                                        return <MenuItem value={a} key={a}>{a}</MenuItem>
+                                    })}
+                                </Select>
+                            </FormControl>
+                            <FormControl className='w-4/12'>
+                                <InputLabel>Nombre d'exos</InputLabel>
+                                <Select
+                                    label="Nombre d'exos"
+                                    value={nbr5}
+                                    onChange={(e) => setNbr5(e.target.value)}>
+                                    <MenuItem value={0}>0</MenuItem>
+                                    <MenuItem value={1}>1</MenuItem>
+                                    <MenuItem value={2}>2</MenuItem>
+                                    <MenuItem value={3}>3</MenuItem>
+                                    <MenuItem value={4}>4</MenuItem>
+                                    <MenuItem value={5}>5</MenuItem>
+                                    <MenuItem value={6}>6</MenuItem>
+                                    <MenuItem value={7}>7</MenuItem>
+                                    <MenuItem value={8}>8</MenuItem>
+                                    <MenuItem value={9}>9</MenuItem>
+                                    <MenuItem value={10}>10</MenuItem>
+                                </Select>
+                            </FormControl>
+                        </div>
+                        <div id='divPlus5' className='text-center my-2'>
+                            <Divider>Ajouter un groupe musculaire
+                                <button onClick={() => {
+                                    document.getElementById('div6').classList.remove('hidden')
+                                    document.getElementById('divPlus5').classList.add('hidden')
+                                }} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button>
+                            </Divider>
+                        </div>
+                    </div>
+
+                    <div id='div6' className='hidden'>
+                        <div className='flex justify-between my-2'>
+                            <FormControl className='w-7/12'>
+                                <InputLabel>Groupe musculaire</InputLabel>
+                                <Select
+                                    label="Groupe musculaire"
+                                    value={muscle6}
+                                    onChange={(e) => setMuscle6(e.target.value)}>
+                                    {group.map(a => {
+                                        return <MenuItem value={a} key={a}>{a}</MenuItem>
+                                    })}
+                                </Select>
+                            </FormControl>
+                            <FormControl className='w-4/12'>
+                                <InputLabel>Nombre d'exos</InputLabel>
+                                <Select
+                                    label="Nombre d'exos"
+                                    value={nbr6}
+                                    onChange={(e) => setNbr6(e.target.value)}>
+                                    <MenuItem value={0}>0</MenuItem>
+                                    <MenuItem value={1}>1</MenuItem>
+                                    <MenuItem value={2}>2</MenuItem>
+                                    <MenuItem value={3}>3</MenuItem>
+                                    <MenuItem value={4}>4</MenuItem>
+                                    <MenuItem value={5}>5</MenuItem>
+                                    <MenuItem value={6}>6</MenuItem>
+                                    <MenuItem value={7}>7</MenuItem>
+                                    <MenuItem value={8}>8</MenuItem>
+                                    <MenuItem value={9}>9</MenuItem>
+                                    <MenuItem value={10}>10</MenuItem>
+                                </Select>
+                            </FormControl>
+                        </div>
+                        <div id='divPlus6' className='text-center my-2'>
+                            <Divider>Ajouter un groupe musculaire
+                                <button onClick={() => {
+                                    document.getElementById('div7').classList.remove('hidden')
+                                    document.getElementById('divPlus6').classList.add('hidden')
+                                }} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button>
+                            </Divider>
+                        </div>
+                    </div>
+
+                    <div id='div7' className='hidden'>
+                        <div className='flex justify-between my-2'>
+                            <FormControl className='w-7/12'>
+                                <InputLabel>Groupe musculaire</InputLabel>
+                                <Select
+                                    label="Groupe musculaire"
+                                    value={muscle7}
+                                    onChange={(e) => setMuscle7(e.target.value)}>
+                                    {group.map(a => {
+                                        return <MenuItem value={a} key={a}>{a}</MenuItem>
+                                    })}
+                                </Select>
+                            </FormControl>
+                            <FormControl className='w-4/12'>
+                                <InputLabel>Nombre d'exos</InputLabel>
+                                <Select
+                                    label="Nombre d'exos"
+                                    value={nbr7}
+                                    onChange={(e) => setNbr7(e.target.value)}>
+                                    <MenuItem value={0}>0</MenuItem>
+                                    <MenuItem value={1}>1</MenuItem>
+                                    <MenuItem value={2}>2</MenuItem>
+                                    <MenuItem value={3}>3</MenuItem>
+                                    <MenuItem value={4}>4</MenuItem>
+                                    <MenuItem value={5}>5</MenuItem>
+                                    <MenuItem value={6}>6</MenuItem>
+                                    <MenuItem value={7}>7</MenuItem>
+                                    <MenuItem value={8}>8</MenuItem>
+                                    <MenuItem value={9}>9</MenuItem>
+                                    <MenuItem value={10}>10</MenuItem>
+                                </Select>
+                            </FormControl>
+                        </div>
+                        <div id='divPlus7' className='text-center my-2'>
+                            <Divider>Ajouter un groupe musculaire
+                                <button onClick={() => {
+                                    document.getElementById('div8').classList.remove('hidden')
+                                    document.getElementById('divPlus7').classList.add('hidden')
+                                }} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button>
+                            </Divider>
+                        </div>
+                    </div>
+
+                    <div id='div8' className='hidden'>
+                        <div className='flex justify-between my-2'>
+                            <FormControl className='w-7/12'>
+                                <InputLabel>Groupe musculaire</InputLabel>
+                                <Select
+                                    label="Groupe musculaire"
+                                    value={muscle8}
+                                    onChange={(e) => setMuscle8(e.target.value)}>
+                                    {group.map(a => {
+                                        return <MenuItem value={a} key={a}>{a}</MenuItem>
+                                    })}
+                                </Select>
+                            </FormControl>
+                            <FormControl className='w-4/12'>
+                                <InputLabel>Nombre d'exos</InputLabel>
+                                <Select
+                                    label="Nombre d'exos"
+                                    value={nbr8}
+                                    onChange={(e) => setNbr8(e.target.value)}>
+                                    <MenuItem value={0}>0</MenuItem>
+                                    <MenuItem value={1}>1</MenuItem>
+                                    <MenuItem value={2}>2</MenuItem>
+                                    <MenuItem value={3}>3</MenuItem>
+                                    <MenuItem value={4}>4</MenuItem>
+                                    <MenuItem value={5}>5</MenuItem>
+                                    <MenuItem value={6}>6</MenuItem>
+                                    <MenuItem value={7}>7</MenuItem>
+                                    <MenuItem value={8}>8</MenuItem>
+                                    <MenuItem value={9}>9</MenuItem>
+                                    <MenuItem value={10}>10</MenuItem>
+                                </Select>
+                            </FormControl>
+                        </div>
+                        <div id='divPlus8' className='text-center my-2'>
+                            <Divider>Ajouter un groupe musculaire
+                                <button onClick={() => {
+                                    document.getElementById('div9').classList.remove('hidden')
+                                    document.getElementById('divPlus8').classList.add('hidden')
+                                }} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button>
+                            </Divider>
+                        </div>
+                    </div>
+
+                    <div id='div9' className='hidden'>
+                        <div className='flex justify-between my-2'>
+                            <FormControl className='w-7/12'>
+                                <InputLabel>Groupe musculaire</InputLabel>
+                                <Select
+                                    label="Groupe musculaire"
+                                    value={muscle9}
+                                    onChange={(e) => setMuscle9(e.target.value)}>
+                                    {group.map(a => {
+                                        return <MenuItem value={a} key={a}>{a}</MenuItem>
+                                    })}
+                                </Select>
+                            </FormControl>
+                            <FormControl className='w-4/12'>
+                                <InputLabel>Nombre d'exos</InputLabel>
+                                <Select
+                                    label="Nombre d'exos"
+                                    value={nbr9}
+                                    onChange={(e) => setNbr9(e.target.value)}>
+                                    <MenuItem value={0}>0</MenuItem>
+                                    <MenuItem value={1}>1</MenuItem>
+                                    <MenuItem value={2}>2</MenuItem>
+                                    <MenuItem value={3}>3</MenuItem>
+                                    <MenuItem value={4}>4</MenuItem>
+                                    <MenuItem value={5}>5</MenuItem>
+                                    <MenuItem value={6}>6</MenuItem>
+                                    <MenuItem value={7}>7</MenuItem>
+                                    <MenuItem value={8}>8</MenuItem>
+                                    <MenuItem value={9}>9</MenuItem>
+                                    <MenuItem value={10}>10</MenuItem>
+                                </Select>
+                            </FormControl>
+                        </div>
+                    </div>
+
+                    <div className='text-center mt-4'>
+                        <button onClick={generateWorkout}
+                            className="rounded-full bg-teal-500 hover:border-teal-500 px-4"
+                        >
+                            <BsArrowDownShort size={25} color='white' />
+                        </button>
+                    </div>
+
+                </div> :
+                <div className='text-center'>
+                    <button className='px-4 rounded-full my-2 bg-gray-200' onClick={() => setShowGenerator(true)}><BsArrowUpShort className='mx-auto' color='teal' size={25} /></button>
                 </div>
-
-                <div id='div2' className='hidden'>
-                    <div className='flex justify-between my-2'>
-                        <FormControl className='w-8/12'>
-                            <InputLabel>Groupe musculaire</InputLabel>
-                            <Select
-                                label="Groupe musculaire"
-                                value={muscle2}
-                                onChange={(e) => setMuscle2(e.target.value)}>
-                                {group.map(a => {
-                                    return <MenuItem value={a} key={a}>{a}</MenuItem>
-                                })}
-                            </Select>
-                        </FormControl>
-                        <FormControl className='w-3/12'>
-                            <InputLabel>Nombre d'exos</InputLabel>
-                            <Select
-                                label="Nombre d'exos"
-                                value={nbr2}
-                                onChange={(e) => setNbr2(e.target.value)}>
-                                <MenuItem value={0}>0</MenuItem>
-                                <MenuItem value={1}>1</MenuItem>
-                                <MenuItem value={2}>2</MenuItem>
-                                <MenuItem value={3}>3</MenuItem>
-                                <MenuItem value={4}>4</MenuItem>
-                                <MenuItem value={5}>5</MenuItem>
-                                <MenuItem value={6}>6</MenuItem>
-                                <MenuItem value={7}>7</MenuItem>
-                                <MenuItem value={8}>8</MenuItem>
-                                <MenuItem value={9}>9</MenuItem>
-                                <MenuItem value={10}>10</MenuItem>
-                            </Select>
-                        </FormControl>
-                    </div>
-                    <div id='divPlus2' className='text-center my-2'>
-                        <Divider>Ajouter un groupe musculaire
-                            <button onClick={() => {
-                                document.getElementById('div3').classList.remove('hidden')
-                                document.getElementById('divPlus2').classList.add('hidden')
-                            }} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button>
-                        </Divider>
-                    </div>
-                </div>
-
-                <div id='div3' className='hidden'>
-                    <div className='flex justify-between my-2'>
-                        <FormControl className='w-8/12'>
-                            <InputLabel>Groupe musculaire</InputLabel>
-                            <Select
-                                label="Groupe musculaire"
-                                value={muscle3}
-                                onChange={(e) => setMuscle3(e.target.value)}>
-                                {group.map(a => {
-                                    return <MenuItem value={a} key={a}>{a}</MenuItem>
-                                })}
-                            </Select>
-                        </FormControl>
-                        <FormControl className='w-3/12'>
-                            <InputLabel>Nombre d'exos</InputLabel>
-                            <Select
-                                label="Nombre d'exos"
-                                value={nbr3}
-                                onChange={(e) => setNbr3(e.target.value)}>
-                                <MenuItem value={0}>0</MenuItem>
-                                <MenuItem value={1}>1</MenuItem>
-                                <MenuItem value={2}>2</MenuItem>
-                                <MenuItem value={3}>3</MenuItem>
-                                <MenuItem value={4}>4</MenuItem>
-                                <MenuItem value={5}>5</MenuItem>
-                                <MenuItem value={6}>6</MenuItem>
-                                <MenuItem value={7}>7</MenuItem>
-                                <MenuItem value={8}>8</MenuItem>
-                                <MenuItem value={9}>9</MenuItem>
-                                <MenuItem value={10}>10</MenuItem>
-                            </Select>
-                        </FormControl>
-                    </div>
-                    <div id='divPlus3' className='text-center my-2'>
-                        <Divider>Ajouter un groupe musculaire
-                            <button onClick={() => {
-                                document.getElementById('div4').classList.remove('hidden')
-                                document.getElementById('divPlus3').classList.add('hidden')
-                            }} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button>
-                        </Divider>
-                    </div>
-                </div>
-
-                <div id='div4' className='hidden'>
-                    <div className='flex justify-between my-2'>
-                        <FormControl className='w-8/12'>
-                            <InputLabel>Groupe musculaire</InputLabel>
-                            <Select
-                                label="Groupe musculaire"
-                                value={muscle4}
-                                onChange={(e) => setMuscle4(e.target.value)}>
-                                {group.map(a => {
-                                    return <MenuItem value={a} key={a}>{a}</MenuItem>
-                                })}
-                            </Select>
-                        </FormControl>
-                        <FormControl className='w-3/12'>
-                            <InputLabel>Nombre d'exos</InputLabel>
-                            <Select
-                                label="Nombre d'exos"
-                                value={nbr4}
-                                onChange={(e) => setNbr4(e.target.value)}>
-                                <MenuItem value={0}>0</MenuItem>
-                                <MenuItem value={1}>1</MenuItem>
-                                <MenuItem value={2}>2</MenuItem>
-                                <MenuItem value={3}>3</MenuItem>
-                                <MenuItem value={4}>4</MenuItem>
-                                <MenuItem value={5}>5</MenuItem>
-                                <MenuItem value={6}>6</MenuItem>
-                                <MenuItem value={7}>7</MenuItem>
-                                <MenuItem value={8}>8</MenuItem>
-                                <MenuItem value={9}>9</MenuItem>
-                                <MenuItem value={10}>10</MenuItem>
-                            </Select>
-                        </FormControl>
-                    </div>
-                    <div id='divPlus4' className='text-center my-2'>
-                        <Divider>Ajouter un groupe musculaire
-                            <button onClick={() => {
-                                document.getElementById('div5').classList.remove('hidden')
-                                document.getElementById('divPlus4').classList.add('hidden')
-                            }} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button>
-                        </Divider>
-                    </div>
-                </div>
-
-                <div id='div5' className='hidden'>
-                    <div className='flex justify-between my-2'>
-                        <FormControl className='w-8/12'>
-                            <InputLabel>Groupe musculaire</InputLabel>
-                            <Select
-                                label="Groupe musculaire"
-                                value={muscle5}
-                                onChange={(e) => setMuscle5(e.target.value)}>
-                                {group.map(a => {
-                                    return <MenuItem value={a} key={a}>{a}</MenuItem>
-                                })}
-                            </Select>
-                        </FormControl>
-                        <FormControl className='w-3/12'>
-                            <InputLabel>Nombre d'exos</InputLabel>
-                            <Select
-                                label="Nombre d'exos"
-                                value={nbr5}
-                                onChange={(e) => setNbr5(e.target.value)}>
-                                <MenuItem value={0}>0</MenuItem>
-                                <MenuItem value={1}>1</MenuItem>
-                                <MenuItem value={2}>2</MenuItem>
-                                <MenuItem value={3}>3</MenuItem>
-                                <MenuItem value={4}>4</MenuItem>
-                                <MenuItem value={5}>5</MenuItem>
-                                <MenuItem value={6}>6</MenuItem>
-                                <MenuItem value={7}>7</MenuItem>
-                                <MenuItem value={8}>8</MenuItem>
-                                <MenuItem value={9}>9</MenuItem>
-                                <MenuItem value={10}>10</MenuItem>
-                            </Select>
-                        </FormControl>
-                    </div>
-                    <div id='divPlus5' className='text-center my-2'>
-                        <Divider>Ajouter un groupe musculaire
-                            <button onClick={() => {
-                                document.getElementById('div6').classList.remove('hidden')
-                                document.getElementById('divPlus5').classList.add('hidden')
-                            }} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button>
-                        </Divider>
-                    </div>
-                </div>
-
-                <div id='div6' className='hidden'>
-                    <div className='flex justify-between my-2'>
-                        <FormControl className='w-8/12'>
-                            <InputLabel>Groupe musculaire</InputLabel>
-                            <Select
-                                label="Groupe musculaire"
-                                value={muscle6}
-                                onChange={(e) => setMuscle6(e.target.value)}>
-                                {group.map(a => {
-                                    return <MenuItem value={a} key={a}>{a}</MenuItem>
-                                })}
-                            </Select>
-                        </FormControl>
-                        <FormControl className='w-3/12'>
-                            <InputLabel>Nombre d'exos</InputLabel>
-                            <Select
-                                label="Nombre d'exos"
-                                value={nbr6}
-                                onChange={(e) => setNbr6(e.target.value)}>
-                                <MenuItem value={0}>0</MenuItem>
-                                <MenuItem value={1}>1</MenuItem>
-                                <MenuItem value={2}>2</MenuItem>
-                                <MenuItem value={3}>3</MenuItem>
-                                <MenuItem value={4}>4</MenuItem>
-                                <MenuItem value={5}>5</MenuItem>
-                                <MenuItem value={6}>6</MenuItem>
-                                <MenuItem value={7}>7</MenuItem>
-                                <MenuItem value={8}>8</MenuItem>
-                                <MenuItem value={9}>9</MenuItem>
-                                <MenuItem value={10}>10</MenuItem>
-                            </Select>
-                        </FormControl>
-                    </div>
-                    <div id='divPlus6' className='text-center my-2'>
-                        <Divider>Ajouter un groupe musculaire
-                            <button onClick={() => {
-                                document.getElementById('div7').classList.remove('hidden')
-                                document.getElementById('divPlus6').classList.add('hidden')
-                            }} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button>
-                        </Divider>
-                    </div>
-                </div>
-
-                <div id='div7' className='hidden'>
-                    <div className='flex justify-between my-2'>
-                        <FormControl className='w-8/12'>
-                            <InputLabel>Groupe musculaire</InputLabel>
-                            <Select
-                                label="Groupe musculaire"
-                                value={muscle7}
-                                onChange={(e) => setMuscle7(e.target.value)}>
-                                {group.map(a => {
-                                    return <MenuItem value={a} key={a}>{a}</MenuItem>
-                                })}
-                            </Select>
-                        </FormControl>
-                        <FormControl className='w-3/12'>
-                            <InputLabel>Nombre d'exos</InputLabel>
-                            <Select
-                                label="Nombre d'exos"
-                                value={nbr7}
-                                onChange={(e) => setNbr7(e.target.value)}>
-                                <MenuItem value={0}>0</MenuItem>
-                                <MenuItem value={1}>1</MenuItem>
-                                <MenuItem value={2}>2</MenuItem>
-                                <MenuItem value={3}>3</MenuItem>
-                                <MenuItem value={4}>4</MenuItem>
-                                <MenuItem value={5}>5</MenuItem>
-                                <MenuItem value={6}>6</MenuItem>
-                                <MenuItem value={7}>7</MenuItem>
-                                <MenuItem value={8}>8</MenuItem>
-                                <MenuItem value={9}>9</MenuItem>
-                                <MenuItem value={10}>10</MenuItem>
-                            </Select>
-                        </FormControl>
-                    </div>
-                    <div id='divPlus7' className='text-center my-2'>
-                        <Divider>Ajouter un groupe musculaire
-                            <button onClick={() => {
-                                document.getElementById('div8').classList.remove('hidden')
-                                document.getElementById('divPlus7').classList.add('hidden')
-                            }} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button>
-                        </Divider>
-                    </div>
-                </div>
-
-                <div id='div8' className='hidden'>
-                    <div className='flex justify-between my-2'>
-                        <FormControl className='w-8/12'>
-                            <InputLabel>Groupe musculaire</InputLabel>
-                            <Select
-                                label="Groupe musculaire"
-                                value={muscle8}
-                                onChange={(e) => setMuscle8(e.target.value)}>
-                                {group.map(a => {
-                                    return <MenuItem value={a} key={a}>{a}</MenuItem>
-                                })}
-                            </Select>
-                        </FormControl>
-                        <FormControl className='w-3/12'>
-                            <InputLabel>Nombre d'exos</InputLabel>
-                            <Select
-                                label="Nombre d'exos"
-                                value={nbr8}
-                                onChange={(e) => setNbr8(e.target.value)}>
-                                <MenuItem value={0}>0</MenuItem>
-                                <MenuItem value={1}>1</MenuItem>
-                                <MenuItem value={2}>2</MenuItem>
-                                <MenuItem value={3}>3</MenuItem>
-                                <MenuItem value={4}>4</MenuItem>
-                                <MenuItem value={5}>5</MenuItem>
-                                <MenuItem value={6}>6</MenuItem>
-                                <MenuItem value={7}>7</MenuItem>
-                                <MenuItem value={8}>8</MenuItem>
-                                <MenuItem value={9}>9</MenuItem>
-                                <MenuItem value={10}>10</MenuItem>
-                            </Select>
-                        </FormControl>
-                    </div>
-                    <div id='divPlus8' className='text-center my-2'>
-                        <Divider>Ajouter un groupe musculaire
-                            <button onClick={() => {
-                                document.getElementById('div9').classList.remove('hidden')
-                                document.getElementById('divPlus8').classList.add('hidden')
-                            }} className='rounded-full bg-teal-500 text-white px-1 ml-3'>+</button>
-                        </Divider>
-                    </div>
-                </div>
-
-                <div id='div9' className='hidden'>
-                    <div className='flex justify-between my-2'>
-                        <FormControl className='w-8/12'>
-                            <InputLabel>Groupe musculaire</InputLabel>
-                            <Select
-                                label="Groupe musculaire"
-                                value={muscle9}
-                                onChange={(e) => setMuscle9(e.target.value)}>
-                                {group.map(a => {
-                                    return <MenuItem value={a} key={a}>{a}</MenuItem>
-                                })}
-                            </Select>
-                        </FormControl>
-                        <FormControl className='w-3/12'>
-                            <InputLabel>Nombre d'exos</InputLabel>
-                            <Select
-                                label="Nombre d'exos"
-                                value={nbr9}
-                                onChange={(e) => setNbr9(e.target.value)}>
-                                <MenuItem value={0}>0</MenuItem>
-                                <MenuItem value={1}>1</MenuItem>
-                                <MenuItem value={2}>2</MenuItem>
-                                <MenuItem value={3}>3</MenuItem>
-                                <MenuItem value={4}>4</MenuItem>
-                                <MenuItem value={5}>5</MenuItem>
-                                <MenuItem value={6}>6</MenuItem>
-                                <MenuItem value={7}>7</MenuItem>
-                                <MenuItem value={8}>8</MenuItem>
-                                <MenuItem value={9}>9</MenuItem>
-                                <MenuItem value={10}>10</MenuItem>
-                            </Select>
-                        </FormControl>
-                    </div>
-                </div>
-
-
-
-                <div className='text-center mt-4'>
-                    <button onClick={generateWorkout}
-                        className="border-2 text-md rounded hover:bg-teal-500 hover:text-white border-teal-500 px-4 py-2"
-                    >
-                        Générer ma séance
-                    </button>
-                </div>
-
-            </div>
+            }
 
 
             {workout?.map(x => {
-                return <div className='border-2 relative bg-gray-200 p-4 rounded-md my-3 mx-2' key={x.name}>
-                    <input onClick={handleChecked} className='absolute w-6 h-6 right-2 top-2 text-teal-500' type="checkbox" />
+                return <div className='border-2 relative bg-gray-200 p-2 rounded-md my-3 text-sm mx-2' key={x.name}>
+                    <input onClick={handleChecked} className='absolute w-5 h-5 right-2 top-2 text-teal-500' type="checkbox" />
                     <div className='flex'>
                         <img className='w-2/6 rounded mr-5' src={`${x.path}`} alt={x.name} />
                         <div className='w-4/6'>
-                            <h2 className='text-xl'>{x.name}</h2>
-                            <p>Nombre de séries : {x.set}</p>
-                            <p>Nombre de rép : {x.reps}</p>
+                            <h2 className='text-lg w-11/12'>{x.name}</h2>
+                            <p>Séries : {x.set}</p>
+                            <p>Répétitions : {x.reps}</p>
                             {x.secondary ? <p>Autre muscle solicité : <br />
-                                <span className='space-x-2'>
+                                <span className='space-x-2 flex flex-wrap'>
                                     {x?.secondary?.map(k => {
-                                        return <span className='bg-white px-1 rounded-md' key={k}>{k}</span>
+                                        return <span className='bg-white px-1 mt-1 rounded-md' key={k}>{k}</span>
                                     })}
                                 </span>
                             </p> : null}

@@ -629,5 +629,36 @@
             "Quadriceps",
             "Mollets"
         ]
+    },
+    {
+        "id": "Quadriceps",
+        "name": "Squat avec landmine",
+        "path": "../assets/workout-images/quadri_1.gif",
+        "set": 4,
+        "reps": "Max",
+        "secondary": [
+            "Ischios"
+        ]
+    },
+    {
+        "id": "Quadriceps",
+        "name": "Squat cosaque",
+        "path": "../assets/workout-images/fessiers_5.gif",
+        "set": 4,
+        "reps": "8 (de chaques côtés)",
+        "secondary": [
+            "Ischios",
+            "Mollets"
+        ]
+    },
+    {
+        "id": "Quadriceps",
+        "name": "Overhead squat",
+        "path": "../assets/workout-images/quadri_3.gif",
+        "set": 3,
+        "reps": 18,
+        "secondary": [
+            "Ischios"
+        ]
     }
 ]
