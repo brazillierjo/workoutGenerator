@@ -45,6 +45,9 @@ export default function Home() {
         x = x.flat().filter((v, i, a) => a.indexOf(v) === i)
         x.sort()
         setGroup(x)
+        let localDatas = localStorage.getItem('workout')
+        let parsedLocalDatas = JSON.parse(localDatas)
+        setWorkout(parsedLocalDatas)
     }, [])
 
     function generateWorkout() {
@@ -159,6 +162,7 @@ export default function Home() {
             }
         }
         setWorkout(workout)
+        localStorage.setItem('workout', JSON.stringify(workout))
     }
 
     function handleChecked(e) {
@@ -567,6 +571,8 @@ export default function Home() {
                 </div>
 
             </div>
+
+
             {workout?.map(x => {
                 return <div className='border-2 relative bg-gray-200 p-4 rounded-md my-3 mx-2' key={x.name}>
                     <input onClick={handleChecked} className='absolute w-6 h-6 right-2 top-2 text-teal-500' type="checkbox" />
