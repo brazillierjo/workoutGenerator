@@ -622,7 +622,7 @@ export default function Home() {
                     </div>
                 </div>
             })}
-            {!showGenerator ? <div className='text-center mt-8'><button onClick={resetWorkout} className='bg-black text-white w-11/12 py-2 rounded-md'>J'ai fini ma séance !</button></div> : null}
+            {!showGenerator ? <div className='text-center mt-8'><button onClick={resetWorkout} className='bg-black text-white w-11/12 py-2 mb-8 rounded-md'>J'ai fini ma séance !</button></div> : null}
         </div>
     )
 }
