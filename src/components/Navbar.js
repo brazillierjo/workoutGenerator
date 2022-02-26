@@ -13,24 +13,24 @@ export default function Example() {
             </div>
             <div className="w-full text-white">
                 <div className="flex justify-end lg:justify-start space-x-6">
-                    <Link to={"/"}>
+                    {listIsActive ? <Link to={"/"}>
                         <button onClick={() => {
                             setHomeIsActive(true)
                             setListIsActive(false)
                         }}
-                            className={`px-2 py-1 rounded text-sm ${homeIsActive ? "" : "bg-white text-black"}`}>
-                            Accueil
+                            className="bg-white shadow-2xl px-2 py-1 rounded-xl text-md text-black">
+                            Retour à l'accueil
                         </button>
-                    </Link>
-                    <Link className="text-sm" to={"/list"}>
+                    </Link> : null}
+                    {homeIsActive ? <Link className="text-sm" to={"/list"}>
                         <button onClick={() => {
                             setHomeIsActive(false)
                             setListIsActive(true)
                         }}
-                            className={`px-2 py-1 rounded text-sm ${listIsActive ? "" : "bg-white text-black"}`}>
-                            Liste d'exos
+                            className="bg-white shadow-2xl px-2 py-1 rounded-xl text-md text-black">
+                            Voir la liste des exercices
                         </button>
-                    </Link>
+                    </Link> : null}
                 </div>
             </div>
         </nav>
