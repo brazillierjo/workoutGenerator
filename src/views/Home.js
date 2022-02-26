@@ -179,10 +179,34 @@ export default function Home() {
 
     }
 
+    function resetWorkout() {
+        setWorkout([])
+        setMuscle1('')
+        setNbr1(0)
+        setMuscle2('')
+        setNbr2(0)
+        setMuscle3('')
+        setNbr3(0)
+        setMuscle4('')
+        setNbr4(0)
+        setMuscle5('')
+        setNbr5(0)
+        setMuscle6('')
+        setNbr6(0)
+        setMuscle7('')
+        setNbr7(0)
+        setMuscle8('')
+        setNbr8(0)
+        setMuscle9('')
+        setNbr9(0)
+        localStorage.removeItem('workout')
+        setShowGenerator(true)
+    }
+
     return (
         <div className='h-screen'>
             {showGenerator ?
-                <div className='bg-gray-200 rounded-md p-3'>
+                <div className='bg-gray-200 rounded-md px-3 py-8'>
                     <h1 className='text-xl text-center mb-4'>Quel groupe musculaire doit-on travailler ?</h1>
 
                     <div id='displayedDiv'>
@@ -573,7 +597,7 @@ export default function Home() {
                     </div>
                 </div> :
                 <div className='ml-2 mt-2 mb-2'>
-                    <button className='px-1 py-1 rounded-full bg-gray-200' onClick={() => setShowGenerator(true)}><AiFillCaretLeft className='mx-auto' color='#06B6D4' size={15} /></button>
+                    <button className='px-1 py-1 rounded-full bg-gray-200' onClick={() => setShowGenerator(true)}><AiFillCaretLeft className='mx-auto' color='black' size={15} /></button>
                 </div>
             }
 
@@ -598,6 +622,7 @@ export default function Home() {
                     </div>
                 </div>
             })}
+            {!showGenerator ? <div className='text-center mt-8'><button onClick={resetWorkout} className='bg-black text-white w-11/12 py-2 rounded-md'>J'ai fini ma séance !</button></div> : null}
         </div>
     )
 }
