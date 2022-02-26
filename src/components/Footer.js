@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Footer() {
     return (
-        <footer className='bg-cyan-500 text-white text-sm p-5 mt-14 text-center'>
+        <footer className='bg-black text-white text-sm p-5 text-center'>
             <p className='text-sm'>Site web créé et développé par BRAZILLIER Johan</p>
             <div className='flex justify-center space-x-8 mt-1'>
                 <a href="https://github.com/brazillierjo" rel='noreferrer' target="_blank" className='flex'>GitHub

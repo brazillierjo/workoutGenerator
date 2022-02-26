@@ -171,18 +171,18 @@ export default function Home() {
     function handleChecked(e) {
         let upperDiv = e.target.parentNode
         if (e.target.checked) {
-            upperDiv.classList.add('border-cyan-500')
+            upperDiv.classList.add('border-black')
         }
         if (!e.target.checked) {
-            upperDiv.classList.remove('border-cyan-500')
+            upperDiv.classList.remove('border-black')
         }
 
     }
 
     return (
-        <div>
+        <div className='h-screen'>
             {showGenerator ?
-                <div className='bg-gray-200 rounded-md p-3 m-3'>
+                <div className='bg-gray-200 rounded-md p-3'>
                     <h1 className='text-xl text-center mb-4'>Quel groupe musculaire doit-on travailler ?</h1>
 
                     <div id='displayedDiv'>
@@ -223,7 +223,7 @@ export default function Home() {
                                 <button onClick={() => {
                                     document.getElementById('div2').classList.remove('hidden')
                                     document.getElementById('divPlus1').classList.add('hidden')
-                                }} className='rounded-full bg-cyan-500 text-white px-2 ml-2'>+</button>
+                                }} className='rounded-full bg-black text-white px-2 ml-2'>+</button>
                             </Divider>
                         </div>
                     </div>
@@ -266,7 +266,7 @@ export default function Home() {
                                 <button onClick={() => {
                                     document.getElementById('div3').classList.remove('hidden')
                                     document.getElementById('divPlus2').classList.add('hidden')
-                                }} className='rounded-full bg-cyan-500 text-white px-1 ml-3'>+</button>
+                                }} className='rounded-full bg-black text-white px-1 ml-3'>+</button>
                             </Divider>
                         </div>
                     </div>
@@ -309,7 +309,7 @@ export default function Home() {
                                 <button onClick={() => {
                                     document.getElementById('div4').classList.remove('hidden')
                                     document.getElementById('divPlus3').classList.add('hidden')
-                                }} className='rounded-full bg-cyan-500 text-white px-1 ml-3'>+</button>
+                                }} className='rounded-full bg-black text-white px-1 ml-3'>+</button>
                             </Divider>
                         </div>
                     </div>
@@ -352,7 +352,7 @@ export default function Home() {
                                 <button onClick={() => {
                                     document.getElementById('div5').classList.remove('hidden')
                                     document.getElementById('divPlus4').classList.add('hidden')
-                                }} className='rounded-full bg-cyan-500 text-white px-1 ml-3'>+</button>
+                                }} className='rounded-full bg-black text-white px-1 ml-3'>+</button>
                             </Divider>
                         </div>
                     </div>
@@ -395,7 +395,7 @@ export default function Home() {
                                 <button onClick={() => {
                                     document.getElementById('div6').classList.remove('hidden')
                                     document.getElementById('divPlus5').classList.add('hidden')
-                                }} className='rounded-full bg-cyan-500 text-white px-1 ml-3'>+</button>
+                                }} className='rounded-full bg-black text-white px-1 ml-3'>+</button>
                             </Divider>
                         </div>
                     </div>
@@ -438,7 +438,7 @@ export default function Home() {
                                 <button onClick={() => {
                                     document.getElementById('div7').classList.remove('hidden')
                                     document.getElementById('divPlus6').classList.add('hidden')
-                                }} className='rounded-full bg-cyan-500 text-white px-1 ml-3'>+</button>
+                                }} className='rounded-full bg-black text-white px-1 ml-3'>+</button>
                             </Divider>
                         </div>
                     </div>
@@ -481,7 +481,7 @@ export default function Home() {
                                 <button onClick={() => {
                                     document.getElementById('div8').classList.remove('hidden')
                                     document.getElementById('divPlus7').classList.add('hidden')
-                                }} className='rounded-full bg-cyan-500 text-white px-1 ml-3'>+</button>
+                                }} className='rounded-full bg-black text-white px-1 ml-3'>+</button>
                             </Divider>
                         </div>
                     </div>
@@ -524,7 +524,7 @@ export default function Home() {
                                 <button onClick={() => {
                                     document.getElementById('div9').classList.remove('hidden')
                                     document.getElementById('divPlus8').classList.add('hidden')
-                                }} className='rounded-full bg-cyan-500 text-white px-1 ml-3'>+</button>
+                                }} className='rounded-full bg-black text-white px-1 ml-3'>+</button>
                             </Divider>
                         </div>
                     </div>
@@ -566,7 +566,7 @@ export default function Home() {
 
                     <div className='text-center mt-4'>
                         <button onClick={generateWorkout}
-                            className="rounded-full bg-cyan-500 hover:border-teal-500 px-10 py-2"
+                            className="rounded-full bg-black hover:border-teal-500 px-10 py-2"
                         >
                             <AiFillCaretRight size={15} color='white' />
                         </button>
