@@ -1,7 +1,9 @@
 import React from 'react'
+import Footer from '../components/Footer'
 
 export default function Infos() {
     return (
+        <>
         <div className='m-3'>
             <table className="w-full">
                 <tbody className='bg-gray-200 shadow-md'>
@@ -72,8 +74,10 @@ export default function Infos() {
                     </tr>
                 </tbody>
             </table>
+            </div>
 
+            <Footer />
 
-        </div>
+        </>
     )
 }

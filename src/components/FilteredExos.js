@@ -17,7 +17,7 @@ export default function FilteredExos(props) {
     return <div>
         <div className='flex flex-wrap justify-around bg-gray-200 py-1 mx-8 rounded-md outline-none'>
             {group?.map(group => {
-                return <button className={selectedMuscle === group ? 'bg-black shadow px-6 py-2.5 text-sm leading-5 font-medium text-white rounded-md outline-none focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60' : 'px-6 py-2 rounded-md'} key={group} onClick={() => setSelectedMuscle(group)}>{group}</button>
+                return <button className={selectedMuscle === group ? 'bg-stone-700 shadow px-6 py-2.5 text-sm leading-5 font-medium text-white rounded-md outline-none focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60' : 'px-6 py-2 rounded-md'} key={group} onClick={() => setSelectedMuscle(group)}>{group}</button>
             })}
         </div>
 

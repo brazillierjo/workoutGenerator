@@ -5,7 +5,7 @@ import MenuItem from '@mui/material/MenuItem'
 import FormControl from '@mui/material/FormControl'
 import Select from '@mui/material/Select'
 import Divider from '@mui/material/Divider'
-import { AiFillCaretLeft, AiFillCaretRight } from 'react-icons/ai'
+import { AiFillCaretLeft } from 'react-icons/ai'
 
 export default function Home() {
     const [group, setGroup] = React.useState([])
@@ -247,7 +247,7 @@ export default function Home() {
                                 <button onClick={() => {
                                     document.getElementById('div2').classList.remove('hidden')
                                     document.getElementById('divPlus1').classList.add('hidden')
-                                }} className='rounded-full bg-black text-white px-2 ml-2'>+</button>
+                                }} className='rounded-full bg-stone-700 text-white px-2 ml-2'>+</button>
                             </Divider>
                         </div>
                     </div>
@@ -290,7 +290,7 @@ export default function Home() {
                                 <button onClick={() => {
                                     document.getElementById('div3').classList.remove('hidden')
                                     document.getElementById('divPlus2').classList.add('hidden')
-                                }} className='rounded-full bg-black text-white px-1 ml-3'>+</button>
+                                }} className='rounded-full bg-stone-700 text-white px-1 ml-3'>+</button>
                             </Divider>
                         </div>
                     </div>
@@ -333,7 +333,7 @@ export default function Home() {
                                 <button onClick={() => {
                                     document.getElementById('div4').classList.remove('hidden')
                                     document.getElementById('divPlus3').classList.add('hidden')
-                                }} className='rounded-full bg-black text-white px-1 ml-3'>+</button>
+                                }} className='rounded-full bg-stone-700 text-white px-1 ml-3'>+</button>
                             </Divider>
                         </div>
                     </div>
@@ -376,7 +376,7 @@ export default function Home() {
                                 <button onClick={() => {
                                     document.getElementById('div5').classList.remove('hidden')
                                     document.getElementById('divPlus4').classList.add('hidden')
-                                }} className='rounded-full bg-black text-white px-1 ml-3'>+</button>
+                                }} className='rounded-full bg-stone-700 text-white px-1 ml-3'>+</button>
                             </Divider>
                         </div>
                     </div>
@@ -419,7 +419,7 @@ export default function Home() {
                                 <button onClick={() => {
                                     document.getElementById('div6').classList.remove('hidden')
                                     document.getElementById('divPlus5').classList.add('hidden')
-                                }} className='rounded-full bg-black text-white px-1 ml-3'>+</button>
+                                }} className='rounded-full bg-stone-700 text-white px-1 ml-3'>+</button>
                             </Divider>
                         </div>
                     </div>
@@ -462,7 +462,7 @@ export default function Home() {
                                 <button onClick={() => {
                                     document.getElementById('div7').classList.remove('hidden')
                                     document.getElementById('divPlus6').classList.add('hidden')
-                                }} className='rounded-full bg-black text-white px-1 ml-3'>+</button>
+                                }} className='rounded-full bg-stone-700 text-white px-1 ml-3'>+</button>
                             </Divider>
                         </div>
                     </div>
@@ -505,7 +505,7 @@ export default function Home() {
                                 <button onClick={() => {
                                     document.getElementById('div8').classList.remove('hidden')
                                     document.getElementById('divPlus7').classList.add('hidden')
-                                }} className='rounded-full bg-black text-white px-1 ml-3'>+</button>
+                                }} className='rounded-full bg-stone-700 text-white px-1 ml-3'>+</button>
                             </Divider>
                         </div>
                     </div>
@@ -548,7 +548,7 @@ export default function Home() {
                                 <button onClick={() => {
                                     document.getElementById('div9').classList.remove('hidden')
                                     document.getElementById('divPlus8').classList.add('hidden')
-                                }} className='rounded-full bg-black text-white px-1 ml-3'>+</button>
+                                }} className='rounded-full bg-stone-700 text-white px-1 ml-3'>+</button>
                             </Divider>
                         </div>
                     </div>
@@ -589,10 +589,7 @@ export default function Home() {
                     </div>
 
                     <div className='text-center mt-4'>
-                        <button onClick={generateWorkout}
-                            className="rounded-full bg-black hover:border-teal-500 px-10 py-2"
-                        >
-                            <AiFillCaretRight size={15} color='white' />
+                        <button onClick={generateWorkout} className="rounded-full bg-stone-700 text-white hover:border-teal-500 px-10 py-2">Let's goooooo ! 💪
                         </button>
                     </div>
                 </div> :
@@ -600,6 +597,8 @@ export default function Home() {
                     <button className='px-1 py-1 rounded-full bg-gray-200' onClick={() => setShowGenerator(true)}><AiFillCaretLeft className='mx-auto' color='black' size={15} /></button>
                 </div>
             }
+
+            {showGenerator ? <p className='text-gray-600 text-center mt-12 animate-pulse'>Générez votre séance 👆</p> : null}
 
             {!showGenerator ? <div className='bg-gray-200 p-2 rounded-md mb-8 text-sm mx-2'>
                 <h1 className='text-xl text-center'>Échauffement</h1>
@@ -637,7 +636,7 @@ export default function Home() {
                 <h1 className='text-xl text-center'>Étirements</h1>
             </div> : null}
 
-            {!showGenerator ? <div className='text-center mt-8'><button onClick={resetWorkout} className='bg-black text-white w-11/12 py-2 mb-8 rounded-md'>J'ai fini ma séance !</button></div> : null}
+            {!showGenerator ? <div className='text-center mt-8'><button onClick={resetWorkout} className='bg-stone-700 text-white w-11/12 py-2 mb-8 rounded-md'>J'ai fini ma séance !</button></div> : null}
         </div>
     )
 }
