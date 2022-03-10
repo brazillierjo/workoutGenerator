@@ -601,10 +601,14 @@ export default function Home() {
                 </div>
             }
 
+            {!showGenerator ? <div className='bg-gray-200 p-2 rounded-md mb-8 text-sm mx-2'>
+                <h1 className='text-xl text-center'>Échauffement</h1>
+                <p className="text-center text-xs">10/15 mintes</p>
+            </div> : null}
 
             {workout?.map(x => {
                 return <div className='border-2 relative bg-gray-200 p-2 rounded-md my-3 text-sm mx-2' key={x.name}>
-                    <input onClick={handleChecked} className='absolute w-5 h-5 right-2 top-2 text-teal-500' type="checkbox" />
+                    <input onClick={handleChecked} className='absolute w-4 right-2 top-2 text-teal-500' type="checkbox" />
                     <div className='flex'>
                         <img className='w-2/6 rounded mr-5' src={`${x.path}`} alt={x.name} />
                         <div className='w-4/6'>
@@ -622,6 +626,17 @@ export default function Home() {
                     </div>
                 </div>
             })}
+
+            {!showGenerator ? <div className='bg-gray-200 p-2 rounded-md mt-8 mb-3 text-sm mx-2'>
+                <h1 className='text-xl text-center'>Exercices annexes</h1>
+                <p className='text-center text-xs'>Utilisez cette partie de l'entrainement pour faire un exercice de rattrapage d'un muscle qui vous semble "en retard"</p>
+                <p className='text-center text-xs'>Exemples : Abdos | Squats | Tractions</p>
+            </div> : null}
+
+            {!showGenerator ? <div className='bg-gray-200 p-2 rounded-md my-3 text-sm mx-2'>
+                <h1 className='text-xl text-center'>Étirements</h1>
+            </div> : null}
+
             {!showGenerator ? <div className='text-center mt-8'><button onClick={resetWorkout} className='bg-black text-white w-11/12 py-2 mb-8 rounded-md'>J'ai fini ma séance !</button></div> : null}
         </div>
     )

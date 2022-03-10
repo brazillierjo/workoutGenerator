@@ -31,6 +31,11 @@ export default function Example() {
                             Voir la liste des exercices
                         </button>
                     </Link> : null}
+                    <Link to={"/infos"}>
+                        <button className="bg-white shadow-2xl px-2 py-1 rounded-xl text-md text-black">
+                            ℹ️
+                        </button>
+                    </Link>
                 </div>
             </div>
         </nav>
