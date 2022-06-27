@@ -15,9 +15,9 @@ export default function FilteredExos(props) {
     }, [props.exercices])
 
     return <div>
-        <div className='flex flex-wrap justify-around bg-gray-200 py-1 mx-8 rounded-md outline-none'>
+        <div className='flex flex-wrap justify-around bg-white py-1 mx-8 rounded-md outline-none'>
             {group?.map(group => {
-                return <button className={selectedMuscle === group ? 'bg-stone-700 shadow px-6 py-2.5 text-sm leading-5 font-medium text-white rounded-md outline-none focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60' : 'px-6 py-2 rounded-md'} key={group} onClick={() => setSelectedMuscle(group)}>{group}</button>
+                return <button className={selectedMuscle === group ? 'bg-red-700 shadow px-6 py-2.5 text-sm leading-5 font-medium text-white rounded-md outline-none focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60' : 'px-6 py-2 rounded-md'} key={group} onClick={() => setSelectedMuscle(group)}>{group}</button>
             })}
         </div>
 
@@ -25,7 +25,7 @@ export default function FilteredExos(props) {
         {
             props.exercices.map(exo => {
                 if (exo.id === selectedMuscle) {
-                    return <div className='bg-gray-200 p-2 text-sm rounded-md my-3 mx-2' key={exo.name}>
+                    return <div className='bg-white p-2 text-sm rounded-md my-3 mx-2' key={exo.name}>
                         <div className='flex'>
                             <img className='w-2/6 rounded mr-5' src={`${exo.path}`} alt={exo.name} />
                             <div className='w-4/6'>

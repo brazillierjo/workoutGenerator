@@ -8,6 +8,7 @@ import NotFound from './views/NotFound'
 
 function App() {
   return (
+    <div className='bg-slate-900'>
     <Router>
       <Navbar />
       <Fragment>
@@ -18,7 +19,8 @@ function App() {
           <Route exact path='/error' element={<NotFound />} />
         </Routes>
       </Fragment>
-    </Router>
+      </Router>
+    </div>
   );
 }
 

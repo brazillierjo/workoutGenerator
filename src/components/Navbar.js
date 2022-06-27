@@ -5,7 +5,7 @@ export default function Example() {
     const [homeIsActive, setHomeIsActive] = useState(true);
     const [listIsActive, setListIsActive] = useState(false);
     return (
-        <nav className="flex justify-between bg-stone-700 p-4">
+        <nav className="flex justify-between bg-red-700 p-4">
             <div className="flex items-center flex-shrink-0 text-white mr-8">
                 <Link className="flex" to={"/"}>
                     <span className="text-xl uppercase tracking-tight">My workout</span>

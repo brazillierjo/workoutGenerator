@@ -168,17 +168,6 @@ export default function Home() {
         if (workout.length > 0) setShowGenerator(false)
     }
 
-    function handleChecked(e) {
-        let upperDiv = e.target.parentNode
-        if (e.target.checked) {
-            upperDiv.classList.add('border-black')
-        }
-        if (!e.target.checked) {
-            upperDiv.classList.remove('border-black')
-        }
-
-    }
-
     function resetWorkout() {
         setWorkout([])
         setMuscle1('')
@@ -204,9 +193,10 @@ export default function Home() {
     }
 
     return (
-        <div className='h-screen'>
+        <div className='h-screen w-11/12 mx-auto'>
+
             {showGenerator ?
-                <div className='bg-gray-200 rounded-md px-3 py-8'>
+                <div className='bg-white rounded-2xl shadow-xl px-3 py-8 mt-12 w-11/12 mx-auto'>
                     <h1 className='text-xl text-center mb-4'>Quel groupe musculaire doit-on travailler ?</h1>
 
                     <div id='displayedDiv'>
@@ -247,7 +237,7 @@ export default function Home() {
                                 <button onClick={() => {
                                     document.getElementById('div2').classList.remove('hidden')
                                     document.getElementById('divPlus1').classList.add('hidden')
-                                }} className='rounded-full bg-stone-700 text-white px-2 ml-2'>+</button>
+                                }} className='my-2 rounded-full bg-red-700 text-white px-2 ml-2'>+</button>
                             </Divider>
                         </div>
                     </div>
@@ -290,7 +280,7 @@ export default function Home() {
                                 <button onClick={() => {
                                     document.getElementById('div3').classList.remove('hidden')
                                     document.getElementById('divPlus2').classList.add('hidden')
-                                }} className='rounded-full bg-stone-700 text-white px-1 ml-3'>+</button>
+                                }} className='my-2 rounded-full bg-red-700 text-white px-1 ml-3'>+</button>
                             </Divider>
                         </div>
                     </div>
@@ -333,7 +323,7 @@ export default function Home() {
                                 <button onClick={() => {
                                     document.getElementById('div4').classList.remove('hidden')
                                     document.getElementById('divPlus3').classList.add('hidden')
-                                }} className='rounded-full bg-stone-700 text-white px-1 ml-3'>+</button>
+                                }} className='my-2 rounded-full bg-red-700 text-white px-1 ml-3'>+</button>
                             </Divider>
                         </div>
                     </div>
@@ -376,7 +366,7 @@ export default function Home() {
                                 <button onClick={() => {
                                     document.getElementById('div5').classList.remove('hidden')
                                     document.getElementById('divPlus4').classList.add('hidden')
-                                }} className='rounded-full bg-stone-700 text-white px-1 ml-3'>+</button>
+                                }} className='my-2 rounded-full bg-red-700 text-white px-1 ml-3'>+</button>
                             </Divider>
                         </div>
                     </div>
@@ -419,7 +409,7 @@ export default function Home() {
                                 <button onClick={() => {
                                     document.getElementById('div6').classList.remove('hidden')
                                     document.getElementById('divPlus5').classList.add('hidden')
-                                }} className='rounded-full bg-stone-700 text-white px-1 ml-3'>+</button>
+                                }} className='my-2 rounded-full bg-red-700 text-white px-1 ml-3'>+</button>
                             </Divider>
                         </div>
                     </div>
@@ -462,7 +452,7 @@ export default function Home() {
                                 <button onClick={() => {
                                     document.getElementById('div7').classList.remove('hidden')
                                     document.getElementById('divPlus6').classList.add('hidden')
-                                }} className='rounded-full bg-stone-700 text-white px-1 ml-3'>+</button>
+                                }} className='my-2 rounded-full bg-red-700 text-white px-1 ml-3'>+</button>
                             </Divider>
                         </div>
                     </div>
@@ -505,7 +495,7 @@ export default function Home() {
                                 <button onClick={() => {
                                     document.getElementById('div8').classList.remove('hidden')
                                     document.getElementById('divPlus7').classList.add('hidden')
-                                }} className='rounded-full bg-stone-700 text-white px-1 ml-3'>+</button>
+                                }} className='my-2 rounded-full bg-red-700 text-white px-1 ml-3'>+</button>
                             </Divider>
                         </div>
                     </div>
@@ -548,7 +538,7 @@ export default function Home() {
                                 <button onClick={() => {
                                     document.getElementById('div9').classList.remove('hidden')
                                     document.getElementById('divPlus8').classList.add('hidden')
-                                }} className='rounded-full bg-stone-700 text-white px-1 ml-3'>+</button>
+                                }} className='my-2 rounded-full bg-red-700 text-white px-1 ml-3'>+</button>
                             </Divider>
                         </div>
                     </div>
@@ -589,35 +579,31 @@ export default function Home() {
                     </div>
 
                     <div className='text-center mt-4'>
-                        <button onClick={generateWorkout} className="rounded-full bg-stone-700 text-white hover:border-teal-500 px-10 py-2">Let's goooooo ! 💪
+                        <button onClick={generateWorkout} className="my-2 rounded-full bg-red-700 text-white hover:border-teal-500 px-10 py-2">Let's goooooo ! 💪
                         </button>
                     </div>
                 </div> :
-                <div className='ml-2 mt-2 mb-2'>
-                    <button className='px-1 py-1 rounded-full bg-gray-200' onClick={() => setShowGenerator(true)}><AiFillCaretLeft className='mx-auto' color='black' size={15} /></button>
+                <div className='ml-2 my-7'>
+                    <button className='px-1 py-1 rounded-full bg-white' onClick={() => setShowGenerator(true)}>
+                        <AiFillCaretLeft className='mx-auto' color='black' size={18} />
+                    </button>
                 </div>
             }
 
-            {showGenerator ? <p className='text-gray-600 text-center mt-12 animate-pulse'>Générez votre séance 👆</p> : null}
-
-            {!showGenerator ? <div className='bg-gray-200 p-2 rounded-md mb-8 text-sm mx-2'>
-                <h1 className='text-xl text-center'>Échauffement</h1>
-                <p className="text-center text-xs">10/15 mintes</p>
-            </div> : null}
+            {showGenerator ? <p className='text-white text-center mt-12 animate-pulse'>Générez votre séance 👆</p> : null}
 
             {workout?.map(x => {
-                return <div className='border-2 relative bg-gray-200 p-2 rounded-md my-3 text-sm mx-2' key={x.name}>
-                    <input onClick={handleChecked} className='absolute w-4 right-2 top-2 text-teal-500' type="checkbox" />
+                return <div className='border-3 relative bg-white p-2 rounded-2xl my-3 text-sm mx-2' key={x.name}>
                     <div className='flex'>
-                        <img className='w-2/6 rounded mr-5' src={`${x.path}`} alt={x.name} />
+                        <img className='w-2/6 rounded-xl border-2 shadow-xl mr-5' src={`${x.path}`} alt={x.name} />
                         <div className='w-4/6'>
-                            <h2 className='text-lg mb-3 w-11/12'>{x.name}</h2>
-                            <p>Séries : {x.set}</p>
-                            <p>Répétitions : {x.reps}</p>
+                            <h2 className='text-xl font-bold mb-6 w-11/12'>_{x.name}</h2>
+                            <p className='mb-2 italic font-semibold'>Séries : {x.set}</p>
+                            <p className='mb-2 italic font-semibold'>Répétitions : {x.reps}</p>
                             {x.secondary ? <p>Autre muscle solicité : <br />
                                 <span className='space-x-2 flex flex-wrap'>
                                     {x?.secondary?.map(k => {
-                                        return <span className='bg-white px-1 mt-1 rounded-md' key={k}>{k}</span>
+                                        return <span className='bg-white px-1 mt-1 rounded-2xl' key={k}>{k}</span>
                                     })}
                                 </span>
                             </p> : null}
@@ -626,17 +612,7 @@ export default function Home() {
                 </div>
             })}
 
-            {!showGenerator ? <div className='bg-gray-200 p-2 rounded-md mt-8 mb-3 text-sm mx-2'>
-                <h1 className='text-xl text-center'>Exercices annexes</h1>
-                <p className='text-center text-xs'>Utilisez cette partie de l'entrainement pour faire un exercice de rattrapage d'un muscle qui vous semble "en retard"</p>
-                <p className='text-center text-xs'>Exemples : Abdos | Squats | Tractions</p>
-            </div> : null}
-
-            {!showGenerator ? <div className='bg-gray-200 p-2 rounded-md my-3 text-sm mx-2'>
-                <h1 className='text-xl text-center'>Étirements</h1>
-            </div> : null}
-
-            {!showGenerator ? <div className='text-center mt-8'><button onClick={resetWorkout} className='bg-stone-700 text-white w-11/12 py-2 mb-8 rounded-md'>J'ai fini ma séance !</button></div> : null}
+            {!showGenerator ? <div className='text-center mt-12'><button onClick={resetWorkout} className='bg-red-700 text-white w-full py-2 mb-8 rounded-2xl shadow-xl'>J'ai fini ma séance ! Fiooou 😮‍💨</button></div> : null}
         </div>
     )
 }
