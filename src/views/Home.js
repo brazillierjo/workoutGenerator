@@ -579,7 +579,7 @@ export default function Home() {
                     </div>
 
                     <div className='text-center mt-4'>
-                        <button onClick={generateWorkout} className="my-2 rounded-full bg-red-700 text-white hover:border-teal-500 px-10 py-2">Let's goooooo ! 💪
+                        <button onClick={generateWorkout} className="my-2 rounded-full bg-red-700 shadow-xl text-white px-10 py-2">Let's goooooo ! 💪
                         </button>
                     </div>
                 </div> :
